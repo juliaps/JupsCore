@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'FrequenceDivider:fd|Clock'
+Slack : -123.379
+TNS   : -1492.602
+
+Type  : Slow 1200mV 85C Model Setup 'AutoClock'
+Slack : -122.134
+TNS   : -205.011
+
+Type  : Slow 1200mV 85C Model Hold 'AutoClock'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FrequenceDivider:fd|Clock'
+Slack : 0.629
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AutoClock'
+Slack : -3.000
+TNS   : -67.619
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
+Slack : -2.693
+TNS   : -35.802
+
+Type  : Slow 1200mV 0C Model Setup 'FrequenceDivider:fd|Clock'
+Slack : -111.126
+TNS   : -1344.501
+
+Type  : Slow 1200mV 0C Model Setup 'AutoClock'
+Slack : -110.010
+TNS   : -180.691
+
+Type  : Slow 1200mV 0C Model Hold 'AutoClock'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FrequenceDivider:fd|Clock'
+Slack : 0.562
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AutoClock'
+Slack : -3.000
+TNS   : -67.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
+Slack : -2.649
+TNS   : -35.406
+
+Type  : Fast 1200mV 0C Model Setup 'FrequenceDivider:fd|Clock'
+Slack : -60.305
+TNS   : -727.419
+
+Type  : Fast 1200mV 0C Model Setup 'AutoClock'
+Slack : -59.691
+TNS   : -78.046
+
+Type  : Fast 1200mV 0C Model Hold 'AutoClock'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FrequenceDivider:fd|Clock'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AutoClock'
+Slack : -3.000
+TNS   : -53.241
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
+Slack : -1.000
+TNS   : -18.000
+
+------------------------------------------------------------

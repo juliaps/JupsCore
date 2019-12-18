@@ -1,0 +1,221 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Display1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "AutoClock",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Button",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

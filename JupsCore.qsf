@@ -1,0 +1,275 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 17:48:25  August 17, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		JupsCore_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY JupsCore
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:48:25  AUGUST 17, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name VERILOG_FILE ConversorBinP2.v
+set_global_assignment -name VERILOG_FILE InstructionMemory.v
+set_global_assignment -name VERILOG_FILE ProgramCounter.v
+set_global_assignment -name VERILOG_FILE RegisterBank.v
+set_global_assignment -name VERILOG_FILE Extender.v
+set_global_assignment -name VERILOG_FILE Out.v
+set_global_assignment -name VERILOG_FILE ConversorComp2.v
+set_global_assignment -name VERILOG_FILE ConversorBCD.v
+set_global_assignment -name VERILOG_FILE FrequenceDivider.v
+set_global_assignment -name VERILOG_FILE RandomAccessMemory.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE JupsCore.v
+set_global_assignment -name VERILOG_FILE ControlUnit.v
+set_global_assignment -name VERILOG_FILE Display.v
+set_global_assignment -name VERILOG_FILE setHalt.v
+set_global_assignment -name VERILOG_FILE DeBounce_v.v
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_location_assignment PIN_AB28 -to Switches[0]
+set_location_assignment PIN_AC28 -to Switches[1]
+set_location_assignment PIN_AC27 -to Switches[2]
+set_location_assignment PIN_AD27 -to Switches[3]
+set_location_assignment PIN_AB27 -to Switches[4]
+set_location_assignment PIN_AC26 -to Switches[5]
+set_location_assignment PIN_AD26 -to Switches[6]
+set_location_assignment PIN_AB26 -to Switches[7]
+set_location_assignment PIN_AC25 -to Switches[8]
+set_location_assignment PIN_AB25 -to Switches[9]
+set_location_assignment PIN_AC24 -to Switches[10]
+set_location_assignment PIN_AB24 -to Switches[11]
+set_location_assignment PIN_AB23 -to Switches[12]
+set_location_assignment PIN_AA24 -to Switches[13]
+set_location_assignment PIN_AA23 -to Switches[14]
+set_location_assignment PIN_AA22 -to Switches[15]
+set_location_assignment PIN_W28 -to Display3[0]
+set_location_assignment PIN_W27 -to Display3[1]
+set_location_assignment PIN_Y26 -to Display3[2]
+set_location_assignment PIN_W26 -to Display3[3]
+set_location_assignment PIN_Y25 -to Display3[4]
+set_location_assignment PIN_AA26 -to Display3[5]
+set_location_assignment PIN_AA25 -to Display3[6]
+set_location_assignment PIN_U24 -to Display2[0]
+set_location_assignment PIN_U23 -to Display2[1]
+set_location_assignment PIN_W25 -to Display2[2]
+set_location_assignment PIN_W22 -to Display2[3]
+set_location_assignment PIN_W21 -to Display2[4]
+set_location_assignment PIN_Y22 -to Display2[5]
+set_location_assignment PIN_M24 -to Display2[6]
+set_location_assignment PIN_H22 -to Display1[0]
+set_location_assignment PIN_J22 -to Display1[1]
+set_location_assignment PIN_L25 -to Display1[2]
+set_location_assignment PIN_L26 -to Display1[3]
+set_location_assignment PIN_E17 -to Display1[4]
+set_location_assignment PIN_F22 -to Display1[5]
+set_location_assignment PIN_G18 -to Display1[6]
+set_location_assignment PIN_Y2 -to AutoClock
+set_location_assignment PIN_M21 -to Button
+set_global_assignment -name VECTOR_WAVEFORM_FILE MuxExtender.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform11.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
+set_global_assignment -name VERILOG_FILE PCOut.v
+set_location_assignment PIN_AA17 -to dPC1[6]
+set_location_assignment PIN_AB16 -to dPC1[5]
+set_location_assignment PIN_AA16 -to dPC1[4]
+set_location_assignment PIN_AB17 -to dPC1[3]
+set_location_assignment PIN_AB15 -to dPC1[2]
+set_location_assignment PIN_AA15 -to dPC1[1]
+set_location_assignment PIN_AC17 -to dPC1[0]
+set_location_assignment PIN_AD17 -to dPC2[6]
+set_location_assignment PIN_AE17 -to dPC2[5]
+set_location_assignment PIN_AG17 -to dPC2[4]
+set_location_assignment PIN_AH17 -to dPC2[3]
+set_location_assignment PIN_AF17 -to dPC2[2]
+set_location_assignment PIN_AG18 -to dPC2[1]
+set_location_assignment PIN_AA14 -to dPC2[0]
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform18.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform19.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform20.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform21.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform22.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform23.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform24.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform26.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform27.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform28.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform29.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform30.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform31.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform32.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform33.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform34.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform36.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform37.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform38.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform40.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform41.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform42.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform43.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform44.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform45.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform46.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform47.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform48.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform50.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform51.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform52.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform53.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform54.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform55.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform56.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform57.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform58.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform59.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform60.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform62.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform63.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform64.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform65.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform66.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform67.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform68.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform69.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform70.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform71.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform72.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform73.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform74.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform75.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform76.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform77.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform78.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform79.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform80.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform81.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform82.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform83.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform84.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform85.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform86.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform87.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform89.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform90.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform91.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform92.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform93.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform94.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform95.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform96.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform97.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform98.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform99.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform100.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform101.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform102.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform103.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform104.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform105.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform106.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform107.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform108.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform109.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform110.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform111.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform112.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform113.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform114.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform115.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform116.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform117.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform118.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform119.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform120.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform121.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform122.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform123.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform124.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform125.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform126.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform127.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform128.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform129.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform130.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform131.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform132.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform133.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform134.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform135.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform136.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform137.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform138.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform139.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform140.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform141.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform142.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform143.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform144.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform145.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform146.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform147.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform148.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform149.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform150.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform25.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform35.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform39.vwf
+set_global_assignment -name VERILOG_FILE Mux_32.v
+set_global_assignment -name VERILOG_FILE Mux_5.v
+set_global_assignment -name VERILOG_FILE Mux_16.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
