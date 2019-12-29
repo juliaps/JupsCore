@@ -7,7 +7,7 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 	wire  [31:0]  data1, Data2, data3, dataALU, programCounter;
 	wire clk;
 	wire halt;
-	wire  bounceButton, buttonHalt, resetButton;
+	wire  bounceButton, buttonHalt;
 	wire alu, branch, im, in, j, jal, jr, write, writemem, usestk, type_r, zero;
 	wire [31:0] addrJump, Instruction;
 	wire [15:0] binaryData;
@@ -26,16 +26,10 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 						.DB_out(bounceButton)
 	);
 	
-	//DeBounce_v DBReset( .clk(AutoClock), 
-		//					.n_reset(1'b1), 
-			//				.button_in(Reset),
-				//			.DB_out(resetButton)
-	//);
-	
-	//setHalt sh ( .Clock(clk),
-	//				 .DebounceOut(bounceButton),
-	//				 .Halt(buttonHalt)
-	//);
+	setHalt sh ( .Clock(clk),
+					 .DebounceOut(bounceButton),
+					 .Halt(buttonHalt)
+	);
 	
 	Mux_32 MuxAddrJump( .input_1(data1),
 							  .input_2(imediate),

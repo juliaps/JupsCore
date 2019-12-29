@@ -234,44 +234,6 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, Halt, Im, In, Jal, Jr
 				//type_in = 1'b0;
 				branch = 1'b0;
 				end
-			6'b010111: //slet
-				begin
-				ALU = 1'b1;
-				Halt = 1'b0;
-				Im = 1'b0;
-				In = 1'b0;
-				Jal = 1'b0;
-				Jr = 1'b0;
-				Jump = 1'b0;
-			//	Mem = 1'b0;
-				Write = 1'b1;
-				WriteMem = 1'b0;
-				useStk = 1'b0;
-				alu_code = 5'b01000;
-				type_r = 1'b1;
-				//type_i = 1'b0;
-				//type_in = 1'b0;
-				branch = 1'b0;
-				end
-			6'b011000: //sget
-				begin
-				ALU = 1'b1;
-				Halt = 1'b0;
-				Im = 1'b0;
-				In = 1'b0;
-				Jal = 1'b0;
-				Jr = 1'b0;
-				Jump = 1'b0;
-			//	Mem = 1'b0;
-				Write = 1'b1;
-				WriteMem = 1'b0;
-				useStk = 1'b0;
-				alu_code = 5'b01001;
-				type_r = 1'b1;
-				//type_i = 1'b0;
-				//type_in = 1'b0;
-				branch = 1'b0;
-				end
 			6'b001011: //in
 				begin
 				ALU = 1'b1;
@@ -306,13 +268,15 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, Halt, Im, In, Jal, Jr
 				Write = 1'b0;
 				WriteMem = 1'b0;
 				useStk = 1'b0;
+				Halt = 1'b1;
 				alu_code = 5'b11111;
 				type_r = 1'b0;
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
 				if (Button) Halt = 1'b0;
-				else Halt = 1'b1;
+				//else begin
+					//Halt = 1'b1;
 				//end
 				end
 			6'b000111: //lw

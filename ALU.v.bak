@@ -15,10 +15,8 @@ module ALU(alu_code, Data1, Data2, OutALU, zero);
 			5'b00011 : OutALU = Data1 * Data2; //mult
 			5'b00100 : OutALU = Data1 / notZero; //div 
 			5'b00101 : OutALU = Data2; // loadi // in
-			5'b00110 : OutALU = Data1 < Data2 ? 1'b1 : 1'b0; //slt
-			5'b00111 : OutALU = Data1 > Data2 ? 1'b1 : 1'b0; //sgt
-			5'b01000 : OutALU = Data1 <= Data2 ? 1'b1 : 1'b0; //slet
-			5'b01001 : OutALU = Data1 >= Data2 ? 1'b1 : 1'b0; //sget
+			5'b00110 : OutALU = Data1 <= Data2 ? 1'b1 : 1'b0; //slt
+			5'b00111 : OutALU = Data1 >= Data2 ? 1'b1 : 1'b0; //sgt
 			default: 
 			begin
 				OutALU = 0;

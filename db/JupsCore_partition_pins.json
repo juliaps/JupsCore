@@ -144,7 +144,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "AutoClock",
+					"name" : "Switches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[1]",
 					"strict" : false
 				},
 				{
@@ -204,11 +208,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Switches[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Switches[0]",
+					"name" : "AutoClock",
 					"strict" : false
 				},
 				{

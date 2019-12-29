@@ -19,7 +19,7 @@ module RegisterBank(Clock, jal, Write, Addr1, Addr2, Addr3, AddrWrite, ProgramCo
 	
 	always @(posedge Clock) begin
 		if (jal) begin
-			regs[30] <= ProgramCounter + 1'b1;
+			regs[31] <= ProgramCounter + 1'b1;
 		end
 		
 		if (Write) begin

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("/home/julia/Documents/PROCESSADORTESTE/JupsCore/output_files/") File("JupsCore.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("/home/julia/Music/JupsCore/output_files/") File("JupsCore.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
