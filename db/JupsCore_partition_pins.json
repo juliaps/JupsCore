@@ -144,11 +144,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "Switches[0]",
+					"name" : "dPC3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Switches[1]",
+					"name" : "dPC3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dPC3[6]",
 					"strict" : false
 				},
 				{
@@ -205,6 +225,14 @@
 				},
 				{
 					"name" : "Switches[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Switches[0]",
 					"strict" : false
 				},
 				{
