@@ -1,15 +1,15 @@
 //Button: Button to check in/out
  
-module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1, dPC2);
+module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1, dPC2, dPC3);
 	input  AutoClock, Button;
 	input  [15:0] Switches;
-	output [6:0] Display1, Display2, Display3, dPC1, dPC2;
+	output [6:0] Display1, Display2, Display3, dPC1, dPC2, dPC3;
 	wire  [31:0]  data1, Data2, data3, dataALU, programCounter;
 	wire clk;
 	wire halt;
 	wire  bounceButton, buttonHalt, resetButton;
-	wire alu, branch, im, in, j, jal, jr, write, writemem, usestk, type_r, zero;
-	wire [31:0] addrJump, Instruction;
+	wire alu, branch, change_pc, im, in, j, jal, jr, write, writemem, usestk, type_r, zero, exec_process, select_proc_reg_read, select_proc_reg_write ;
+	wire [31:0] addrJump, Instruction, pc_in;
 	wire [15:0] binaryData;
 	wire [31:0] datain, dataMem, imediate, data2;
 	wire [4:0] aluCode , AddrWrite;
@@ -26,21 +26,17 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 						.DB_out(bounceButton)
 	);
 	
-	//DeBounce_v DBReset( .clk(AutoClock), 
-		//					.n_reset(1'b1), 
-			//				.button_in(Reset),
-				//			.DB_out(resetButton)
-	//);
-	
-	//setHalt sh ( .Clock(clk),
-	//				 .DebounceOut(bounceButton),
-	//				 .Halt(buttonHalt)
-	//);
-	
 	Mux_32 MuxAddrJump( .input_1(data1),
 							  .input_2(imediate),
 							  .flag(jr),
 							  .mux_output(addrJump)
+	);
+	
+	Mux_PC MuxPC( 		 .input_1(data1),
+							 .input_2(data2),
+							 .set(change_pc),
+							 .flag(exec_process),
+							 .mux_output(pc_in)
 	);
 	
 	ProgramCounter pc( .Clock(clk),
@@ -48,7 +44,9 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 							 .jr(jr),
 							 .zero(zero),
 							 .branch(branch),
+							 .change_pc(change_pc),
 							 .AddressJump(addrJump),
+							 .pc_in(pc_in),
 							 .Halt(halt),
 							 .pc_out(programCounter)
 	);
@@ -64,19 +62,20 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 									  .alu_code(aluCode),
 									  .ALU(alu),
 									  .branch(branch),
+									  .change_pc(change_pc),
 									  .Halt(halt),
 									  .Im(im),
 									  .In(in),
 									  .Jal(jal),
 									  .Jr(jr),
 									  .Jump(j),
-									 // .Mem(mem), 
 									  .Write(write),
 									  .WriteMem(writemem),
 									  .useStk(usestk),
-									  .type_r(type_r)
-									  //.type_i(type_i),
-									  //.type_in(type_in)
+									  .type_r(type_r),
+									  .exec_process(exec_process),
+									  .select_proc_reg_read(select_proc_reg_read),
+									  .select_proc_reg_write(select_proc_reg_write)
 	);
 	
 	RandomAccessMemory RAM( .DataIn(data2),
@@ -119,6 +118,8 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 								.AddrWrite(AddrWrite),
 								.ProgramCounter(programCounter),
 								.DataIn(datain),
+								.select_proc_reg_read(select_proc_reg_read),
+								.select_proc_reg_write(select_proc_reg_write),
 								.Data1(data1),
 								.Data2(data2),
 								.Data3(data3)
@@ -145,9 +146,11 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 				  .zero(zero)
 	);
 	
-	PCOut pco( .ProgramCounter(programCounter[8:0]),
-				  .dpc1(dPC1),
-				  .dpc2(dPC2)
+	Out pcout( .dataOut(programCounter[8:0]),
+				  .halt(1'b1),
+				  .display1(dPC1),
+				  .display2(dPC2),
+				  .display3(dPC3)
 	);
 	
 		

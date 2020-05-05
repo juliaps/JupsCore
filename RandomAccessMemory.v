@@ -10,8 +10,8 @@ module RandomAccessMemory(DataIn,Addr, Clock, ClockAuto, WriteMem, useStk, DataO
 	input [31:0] DataIn, Addr;
 	input WriteMem, useStk, Clock, ClockAuto;
 	output [31:0] DataOut;
-	reg [31:0] RAM [99:0]; 
-	reg [31:0] Stack [99:0]; 
+	reg [31:0] RAM [299:0]; 
+	reg [31:0] Stack [299:0]; 
 	reg [31:0] DataMem, DataStack;
 	
 	always @ (posedge Clock) begin
