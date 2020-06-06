@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at JupsCore.v(7): object "Data2" differs only in case from object "data2" in the same scope File: /home/julia/Music/JupsCore/JupsCore.v Line: 7
+Info (10281): Verilog HDL Declaration information at JupsCore.v(7): object "Data2" differs only in case from object "data2" in the same scope File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 7

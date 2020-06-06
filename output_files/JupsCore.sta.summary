@@ -3,27 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'FrequenceDivider:fd|Clock'
-Slack : -138.886
-TNS   : -151230.004
+Slack : -137.987
+TNS   : -149579.659
 
 Type  : Slow 1200mV 85C Model Setup 'AutoClock'
-Slack : -133.871
-TNS   : -823.186
-
-Type  : Slow 1200mV 85C Model Setup 'InstructionMemory:istM|Instruction[26]'
-Slack : -5.463
-TNS   : -15.015
-
-Type  : Slow 1200mV 85C Model Hold 'FrequenceDivider:fd|Clock'
-Slack : -2.583
-TNS   : -18.018
-
-Type  : Slow 1200mV 85C Model Hold 'InstructionMemory:istM|Instruction[26]'
-Slack : -0.476
-TNS   : -0.476
+Slack : -133.339
+TNS   : -823.594
 
 Type  : Slow 1200mV 85C Model Hold 'AutoClock'
 Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FrequenceDivider:fd|Clock'
+Slack : 1.241
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AutoClock'
@@ -32,34 +24,22 @@ TNS   : -101.152
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
 Slack : -2.693
-TNS   : -2705.116
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'InstructionMemory:istM|Instruction[26]'
-Slack : 0.395
-TNS   : 0.000
+TNS   : -2708.971
 
 Type  : Slow 1200mV 0C Model Setup 'FrequenceDivider:fd|Clock'
-Slack : -125.164
-TNS   : -136906.461
+Slack : -124.546
+TNS   : -135420.910
 
 Type  : Slow 1200mV 0C Model Setup 'AutoClock'
-Slack : -120.619
-TNS   : -740.645
-
-Type  : Slow 1200mV 0C Model Setup 'InstructionMemory:istM|Instruction[26]'
-Slack : -5.067
-TNS   : -13.892
-
-Type  : Slow 1200mV 0C Model Hold 'FrequenceDivider:fd|Clock'
-Slack : -2.332
-TNS   : -16.324
-
-Type  : Slow 1200mV 0C Model Hold 'InstructionMemory:istM|Instruction[26]'
-Slack : -0.403
-TNS   : -0.403
+Slack : -120.324
+TNS   : -740.462
 
 Type  : Slow 1200mV 0C Model Hold 'AutoClock'
-Slack : 0.355
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FrequenceDivider:fd|Clock'
+Slack : 1.132
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AutoClock'
@@ -68,46 +48,30 @@ TNS   : -100.976
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
 Slack : -2.649
-TNS   : -2704.588
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'InstructionMemory:istM|Instruction[26]'
-Slack : 0.363
-TNS   : 0.000
+TNS   : -2708.443
 
 Type  : Fast 1200mV 0C Model Setup 'FrequenceDivider:fd|Clock'
-Slack : -68.921
-TNS   : -75389.731
+Slack : -67.769
+TNS   : -73402.947
 
 Type  : Fast 1200mV 0C Model Setup 'AutoClock'
-Slack : -66.516
-TNS   : -380.912
-
-Type  : Fast 1200mV 0C Model Setup 'InstructionMemory:istM|Instruction[26]'
-Slack : -2.517
-TNS   : -7.063
-
-Type  : Fast 1200mV 0C Model Hold 'FrequenceDivider:fd|Clock'
-Slack : -1.458
-TNS   : -10.665
-
-Type  : Fast 1200mV 0C Model Hold 'InstructionMemory:istM|Instruction[26]'
-Slack : -0.239
-TNS   : -0.239
+Slack : -65.633
+TNS   : -378.818
 
 Type  : Fast 1200mV 0C Model Hold 'AutoClock'
 Slack : 0.183
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'FrequenceDivider:fd|Clock'
+Slack : 0.559
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AutoClock'
 Slack : -3.000
-TNS   : -79.616
+TNS   : -80.203
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
 Slack : -1.000
-TNS   : -2092.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'InstructionMemory:istM|Instruction[26]'
-Slack : 0.301
-TNS   : 0.000
+TNS   : -2095.000
 
 ------------------------------------------------------------
