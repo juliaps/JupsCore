@@ -8,7 +8,7 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 	wire clk;
 	wire halt;
 	wire  bounceButton, buttonHalt, resetButton;
-	wire alu, branch, change_pc, im, in, j, jal, jr, write, writemem, usestk, type_r, zero, exec_process, select_proc_reg_read, select_proc_reg_write ;
+	wire alu, branch, change_pc, im, in, j, jal, jr, write, writemem, usestk, type_r, zero, exec_process, select_proc_reg_read, select_proc_reg_write , curr_exec_process, curr_select_proc_reg_write, curr_select_proc_reg_read ;
 	wire [31:0] addrJump, Instruction, pc_in;
 	wire [15:0] binaryData;
 	wire [31:0] datain, dataMem, imediate, data2;
@@ -57,7 +57,20 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 								   .Instruction(Instruction)
 	);
 	
+	ControlSignalMemomry csm(  .clk(clk),
+										.exec_process_in(exec_process),
+										.select_proc_reg_write_in(select_proc_reg_write),
+										.select_proc_reg_read_in(select_proc_reg_read),
+										.exec_process_out(curr_exec_process),
+										.select_proc_reg_write_out(curr_select_proc_reg_write),
+										.select_proc_reg_read_out(curr_select_proc_reg_read)
+	);
+
+	
 	ControlUnit controlUnit(  .Button(~bounceButton),
+									  .curr_exec_process(curr_exec_process),
+									  .curr_select_proc_reg_write(curr_select_proc_reg_write),
+									  .curr_select_proc_reg_read(curr_select_proc_reg_read),
 									  .Opcode(Instruction[31:26]),
 									  .alu_code(aluCode),
 									  .ALU(alu),

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for JupsCore
-Fri Jan  3 14:22:55 2020
+Sat Jun  6 09:02:23 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -15,29 +15,28 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for RandomAccessMemory:RAM|altsyncram:RAM_rtl_0|altsyncram_o2d1:auto_generated
- 17. Source assignments for RandomAccessMemory:RAM|altsyncram:Stack_rtl_0|altsyncram_o2d1:auto_generated
- 18. Parameter Settings for User Entity Instance: DeBounce_v:DB
- 19. Parameter Settings for Inferred Entity Instance: RandomAccessMemory:RAM|altsyncram:RAM_rtl_0
- 20. Parameter Settings for Inferred Entity Instance: RandomAccessMemory:RAM|altsyncram:Stack_rtl_0
- 21. Parameter Settings for Inferred Entity Instance: ALU:arilu|lpm_divide:Div0
- 22. Parameter Settings for Inferred Entity Instance: ALU:arilu|lpm_mult:Mult0
- 23. altsyncram Parameter Settings by Entity Instance
- 24. lpm_mult Parameter Settings by Entity Instance
- 25. Port Connectivity Checks: "Out:pcout"
- 26. Port Connectivity Checks: "Out:out|ConversorComp2:c2"
- 27. Port Connectivity Checks: "RegisterBank:rbank"
- 28. Port Connectivity Checks: "DeBounce_v:DB"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
- 32. Analysis & Synthesis Suppressed Messages
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for RandomAccessMemory:RAM|altsyncram:RAM_rtl_0|altsyncram_o2d1:auto_generated
+ 16. Source assignments for RandomAccessMemory:RAM|altsyncram:Stack_rtl_0|altsyncram_o2d1:auto_generated
+ 17. Parameter Settings for User Entity Instance: DeBounce_v:DB
+ 18. Parameter Settings for Inferred Entity Instance: RandomAccessMemory:RAM|altsyncram:RAM_rtl_0
+ 19. Parameter Settings for Inferred Entity Instance: RandomAccessMemory:RAM|altsyncram:Stack_rtl_0
+ 20. Parameter Settings for Inferred Entity Instance: ALU:arilu|lpm_divide:Div0
+ 21. Parameter Settings for Inferred Entity Instance: ALU:arilu|lpm_mult:Mult0
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. lpm_mult Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "Out:pcout"
+ 25. Port Connectivity Checks: "Out:out|ConversorComp2:c2"
+ 26. Port Connectivity Checks: "RegisterBank:rbank"
+ 27. Port Connectivity Checks: "DeBounce_v:DB"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+ 31. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -63,15 +62,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan  3 14:22:54 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun  6 09:02:23 2020       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; JupsCore                                    ;
 ; Top-level Entity Name              ; JupsCore                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 7,650                                       ;
-;     Total combinational functions  ; 5,664                                       ;
-;     Dedicated logic registers      ; 2,148                                       ;
-; Total registers                    ; 2148                                        ;
+; Total logic elements               ; 7,636                                       ;
+;     Total combinational functions  ; 5,650                                       ;
+;     Dedicated logic registers      ; 2,151                                       ;
+; Total registers                    ; 2151                                        ;
 ; Total pins                         ; 60                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 19,200                                      ;
@@ -179,7 +178,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -188,24 +187,25 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ; Library ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
-; InstructionMemory.v              ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/InstructionMemory.v                                        ;         ;
-; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/ProgramCounter.v                                           ;         ;
-; RegisterBank.v                   ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/RegisterBank.v                                             ;         ;
-; Extender.v                       ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/Extender.v                                                 ;         ;
-; Out.v                            ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/Out.v                                                      ;         ;
-; ConversorComp2.v                 ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/ConversorComp2.v                                           ;         ;
-; ConversorBCD.v                   ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/ConversorBCD.v                                             ;         ;
-; FrequenceDivider.v               ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/FrequenceDivider.v                                         ;         ;
-; RandomAccessMemory.v             ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/RandomAccessMemory.v                                       ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/ALU.v                                                      ;         ;
-; JupsCore.v                       ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/JupsCore.v                                                 ;         ;
-; ControlUnit.v                    ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/ControlUnit.v                                              ;         ;
-; Display.v                        ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/Display.v                                                  ;         ;
-; DeBounce_v.v                     ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/DeBounce_v.v                                               ;         ;
-; Mux_32.v                         ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/Mux_32.v                                                   ;         ;
-; Mux_5.v                          ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/Mux_5.v                                                    ;         ;
-; Mux_16.v                         ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/Mux_16.v                                                   ;         ;
-; Mux_PC.v                         ; yes             ; User Verilog HDL File        ; /home/julia/Music/JupsCore/Mux_PC.v                                                   ;         ;
+; InstructionMemory.v              ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/InstructionMemory.v                                   ;         ;
+; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/ProgramCounter.v                                      ;         ;
+; RegisterBank.v                   ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/RegisterBank.v                                        ;         ;
+; Extender.v                       ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/Extender.v                                            ;         ;
+; Out.v                            ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/Out.v                                                 ;         ;
+; ConversorComp2.v                 ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/ConversorComp2.v                                      ;         ;
+; ConversorBCD.v                   ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/ConversorBCD.v                                        ;         ;
+; FrequenceDivider.v               ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/FrequenceDivider.v                                    ;         ;
+; RandomAccessMemory.v             ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/RandomAccessMemory.v                                  ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/ALU.v                                                 ;         ;
+; JupsCore.v                       ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/JupsCore.v                                            ;         ;
+; ControlUnit.v                    ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/ControlUnit.v                                         ;         ;
+; Display.v                        ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/Display.v                                             ;         ;
+; DeBounce_v.v                     ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/DeBounce_v.v                                          ;         ;
+; Mux_32.v                         ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/Mux_32.v                                              ;         ;
+; Mux_5.v                          ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/Mux_5.v                                               ;         ;
+; Mux_16.v                         ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/Mux_16.v                                              ;         ;
+; Mux_PC.v                         ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/Mux_PC.v                                              ;         ;
+; ControlSignalMemomry.v           ; yes             ; User Verilog HDL File        ; /home/julia/Documents/Jups-Core/ControlSignalMemomry.v                                ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -215,21 +215,21 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_o2d1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/julia/Music/JupsCore/db/altsyncram_o2d1.tdf                                     ;         ;
+; db/altsyncram_o2d1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/julia/Documents/Jups-Core/db/altsyncram_o2d1.tdf                                ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_hkm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/julia/Music/JupsCore/db/lpm_divide_hkm.tdf                                      ;         ;
-; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/julia/Music/JupsCore/db/sign_div_unsign_9nh.tdf                                 ;         ;
-; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/julia/Music/JupsCore/db/alt_u_div_6af.tdf                                       ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/julia/Music/JupsCore/db/add_sub_7pc.tdf                                         ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/julia/Music/JupsCore/db/add_sub_8pc.tdf                                         ;         ;
+; db/lpm_divide_hkm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/julia/Documents/Jups-Core/db/lpm_divide_hkm.tdf                                 ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/julia/Documents/Jups-Core/db/sign_div_unsign_9nh.tdf                            ;         ;
+; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/julia/Documents/Jups-Core/db/alt_u_div_6af.tdf                                  ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/julia/Documents/Jups-Core/db/add_sub_7pc.tdf                                    ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/julia/Documents/Jups-Core/db/add_sub_8pc.tdf                                    ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/multcore.inc          ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; /home/julia/intelFPGA_lite/17.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/julia/Music/JupsCore/db/mult_7dt.tdf                                            ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/julia/Documents/Jups-Core/db/mult_7dt.tdf                                       ;         ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
@@ -238,20 +238,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Estimated Total logic elements              ; 7,650                     ;
+; Estimated Total logic elements              ; 7,636                     ;
 ;                                             ;                           ;
-; Total combinational functions               ; 5664                      ;
+; Total combinational functions               ; 5650                      ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 3270                      ;
-;     -- 3 input functions                    ; 2140                      ;
-;     -- <=2 input functions                  ; 254                       ;
+;     -- 4 input functions                    ; 4326                      ;
+;     -- 3 input functions                    ; 1052                      ;
+;     -- <=2 input functions                  ; 272                       ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 4939                      ;
+;     -- normal mode                          ; 4925                      ;
 ;     -- arithmetic mode                      ; 725                       ;
 ;                                             ;                           ;
-; Total registers                             ; 2148                      ;
-;     -- Dedicated logic registers            ; 2148                      ;
+; Total registers                             ; 2151                      ;
+;     -- Dedicated logic registers            ; 2151                      ;
 ;     -- I/O registers                        ; 0                         ;
 ;                                             ;                           ;
 ; I/O pins                                    ; 60                        ;
@@ -260,54 +260,55 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 6                         ;
 ;                                             ;                           ;
 ; Maximum fan-out node                        ; FrequenceDivider:fd|Clock ;
-; Maximum fan-out                             ; 2145                      ;
-; Total fan-out                               ; 27454                     ;
-; Average fan-out                             ; 3.43                      ;
+; Maximum fan-out                             ; 2148                      ;
+; Total fan-out                               ; 28456                     ;
+; Average fan-out                             ; 3.56                      ;
 +---------------------------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                   ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |JupsCore                                 ; 5664 (0)            ; 2148 (0)                  ; 19200       ; 6            ; 0       ; 3         ; 60   ; 0            ; |JupsCore                                                                                                                                 ; JupsCore            ; work         ;
-;    |ALU:arilu|                            ; 1377 (282)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |JupsCore|ALU:arilu                                                                                                                       ; ALU                 ; work         ;
-;       |lpm_divide:Div0|                   ; 1067 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
-;          |lpm_divide_hkm:auto_generated|  ; 1067 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 1067 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_6af:divider|    ; 1067 (1066)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af       ; work         ;
-;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc         ; work         ;
-;       |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_mult:Mult0                                                                                                        ; lpm_mult            ; work         ;
-;          |mult_7dt:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt            ; work         ;
-;    |ControlUnit:controlUnit|              ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ControlUnit:controlUnit                                                                                                         ; ControlUnit         ; work         ;
-;    |DeBounce_v:DB|                        ; 13 (13)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|DeBounce_v:DB                                                                                                                   ; DeBounce_v          ; work         ;
-;    |FrequenceDivider:fd|                  ; 45 (45)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|FrequenceDivider:fd                                                                                                             ; FrequenceDivider    ; work         ;
-;    |InstructionMemory:istM|               ; 278 (278)           ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|InstructionMemory:istM                                                                                                          ; InstructionMemory   ; work         ;
-;    |Mux_16:MuxExtender|                   ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Mux_16:MuxExtender                                                                                                              ; Mux_16              ; work         ;
-;    |Mux_32:MuxALU|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Mux_32:MuxALU                                                                                                                   ; Mux_32              ; work         ;
-;    |Mux_32:MuxDataInRB|                   ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Mux_32:MuxDataInRB                                                                                                              ; Mux_32              ; work         ;
-;    |Mux_5:MuxRegDest|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Mux_5:MuxRegDest                                                                                                                ; Mux_5               ; work         ;
-;    |Out:out|                              ; 86 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out                                                                                                                         ; Out                 ; work         ;
-;       |ConversorBCD:cBCD|                 ; 35 (35)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|ConversorBCD:cBCD                                                                                                       ; ConversorBCD        ; work         ;
-;       |ConversorComp2:c2|                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|ConversorComp2:c2                                                                                                       ; ConversorComp2      ; work         ;
-;       |Display:d1|                        ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|Display:d1                                                                                                              ; Display             ; work         ;
-;       |Display:d2|                        ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|Display:d2                                                                                                              ; Display             ; work         ;
-;       |Display:d3|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|Display:d3                                                                                                              ; Display             ; work         ;
-;    |Out:pcout|                            ; 1099 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout                                                                                                                       ; Out                 ; work         ;
-;       |ConversorBCD:cBCD|                 ; 39 (39)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|ConversorBCD:cBCD                                                                                                     ; ConversorBCD        ; work         ;
-;       |ConversorComp2:c2|                 ; 1039 (1039)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|ConversorComp2:c2                                                                                                     ; ConversorComp2      ; work         ;
-;       |Display:d1|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|Display:d1                                                                                                            ; Display             ; work         ;
-;       |Display:d2|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|Display:d2                                                                                                            ; Display             ; work         ;
-;       |Display:d3|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|Display:d3                                                                                                            ; Display             ; work         ;
-;    |ProgramCounter:pc|                    ; 89 (89)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ProgramCounter:pc                                                                                                               ; ProgramCounter      ; work         ;
-;    |RandomAccessMemory:RAM|               ; 2 (2)               ; 0 (0)                     ; 19200       ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM                                                                                                          ; RandomAccessMemory  ; work         ;
-;       |altsyncram:RAM_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM|altsyncram:RAM_rtl_0                                                                                     ; altsyncram          ; work         ;
-;          |altsyncram_o2d1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM|altsyncram:RAM_rtl_0|altsyncram_o2d1:auto_generated                                                      ; altsyncram_o2d1     ; work         ;
-;       |altsyncram:Stack_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM|altsyncram:Stack_rtl_0                                                                                   ; altsyncram          ; work         ;
-;          |altsyncram_o2d1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM|altsyncram:Stack_rtl_0|altsyncram_o2d1:auto_generated                                                    ; altsyncram_o2d1     ; work         ;
-;    |RegisterBank:rbank|                   ; 2546 (2546)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RegisterBank:rbank                                                                                                              ; RegisterBank        ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                    ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Entity Name          ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; |JupsCore                                 ; 5650 (0)            ; 2151 (0)                  ; 19200       ; 6            ; 0       ; 3         ; 60   ; 0            ; |JupsCore                                                                                                                                 ; JupsCore             ; work         ;
+;    |ALU:arilu|                            ; 1377 (289)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |JupsCore|ALU:arilu                                                                                                                       ; ALU                  ; work         ;
+;       |lpm_divide:Div0|                   ; 1060 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0                                                                                                       ; lpm_divide           ; work         ;
+;          |lpm_divide_hkm:auto_generated|  ; 1060 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm       ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1060 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh  ; work         ;
+;                |alt_u_div_6af:divider|    ; 1060 (1059)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af        ; work         ;
+;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc          ; work         ;
+;       |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_mult:Mult0                                                                                                        ; lpm_mult             ; work         ;
+;          |mult_7dt:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |JupsCore|ALU:arilu|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt             ; work         ;
+;    |ControlSignalMemomry:csm|             ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ControlSignalMemomry:csm                                                                                                        ; ControlSignalMemomry ; work         ;
+;    |ControlUnit:controlUnit|              ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ControlUnit:controlUnit                                                                                                         ; ControlUnit          ; work         ;
+;    |DeBounce_v:DB|                        ; 13 (13)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|DeBounce_v:DB                                                                                                                   ; DeBounce_v           ; work         ;
+;    |FrequenceDivider:fd|                  ; 45 (45)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|FrequenceDivider:fd                                                                                                             ; FrequenceDivider     ; work         ;
+;    |InstructionMemory:istM|               ; 261 (261)           ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|InstructionMemory:istM                                                                                                          ; InstructionMemory    ; work         ;
+;    |Mux_16:MuxExtender|                   ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Mux_16:MuxExtender                                                                                                              ; Mux_16               ; work         ;
+;    |Mux_32:MuxALU|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Mux_32:MuxALU                                                                                                                   ; Mux_32               ; work         ;
+;    |Mux_32:MuxDataInRB|                   ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Mux_32:MuxDataInRB                                                                                                              ; Mux_32               ; work         ;
+;    |Mux_5:MuxRegDest|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Mux_5:MuxRegDest                                                                                                                ; Mux_5                ; work         ;
+;    |Out:out|                              ; 85 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out                                                                                                                         ; Out                  ; work         ;
+;       |ConversorBCD:cBCD|                 ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|ConversorBCD:cBCD                                                                                                       ; ConversorBCD         ; work         ;
+;       |ConversorComp2:c2|                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|ConversorComp2:c2                                                                                                       ; ConversorComp2       ; work         ;
+;       |Display:d1|                        ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|Display:d1                                                                                                              ; Display              ; work         ;
+;       |Display:d2|                        ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|Display:d2                                                                                                              ; Display              ; work         ;
+;       |Display:d3|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:out|Display:d3                                                                                                              ; Display              ; work         ;
+;    |Out:pcout|                            ; 1109 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout                                                                                                                       ; Out                  ; work         ;
+;       |ConversorBCD:cBCD|                 ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|ConversorBCD:cBCD                                                                                                     ; ConversorBCD         ; work         ;
+;       |ConversorComp2:c2|                 ; 1048 (1048)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|ConversorComp2:c2                                                                                                     ; ConversorComp2       ; work         ;
+;       |Display:d1|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|Display:d1                                                                                                            ; Display              ; work         ;
+;       |Display:d2|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|Display:d2                                                                                                            ; Display              ; work         ;
+;       |Display:d3|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|Out:pcout|Display:d3                                                                                                            ; Display              ; work         ;
+;    |ProgramCounter:pc|                    ; 89 (89)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|ProgramCounter:pc                                                                                                               ; ProgramCounter       ; work         ;
+;    |RandomAccessMemory:RAM|               ; 2 (2)               ; 0 (0)                     ; 19200       ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM                                                                                                          ; RandomAccessMemory   ; work         ;
+;       |altsyncram:RAM_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM|altsyncram:RAM_rtl_0                                                                                     ; altsyncram           ; work         ;
+;          |altsyncram_o2d1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM|altsyncram:RAM_rtl_0|altsyncram_o2d1:auto_generated                                                      ; altsyncram_o2d1      ; work         ;
+;       |altsyncram:Stack_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM|altsyncram:Stack_rtl_0                                                                                   ; altsyncram           ; work         ;
+;          |altsyncram_o2d1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RandomAccessMemory:RAM|altsyncram:Stack_rtl_0|altsyncram_o2d1:auto_generated                                                    ; altsyncram_o2d1      ; work         ;
+;    |RegisterBank:rbank|                   ; 2545 (2545)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |JupsCore|RegisterBank:rbank                                                                                                              ; RegisterBank         ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -337,19 +338,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Dedicated Input Shift Register Chains ; 0           ;
 +---------------------------------------+-------------+
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                            ;
-+----------------------------------------------------+----------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
-+----------------------------------------------------+----------------------------------+------------------------+
-; ControlUnit:controlUnit|select_proc_reg_read       ; ControlUnit:controlUnit|WideOr14 ; yes                    ;
-; ControlUnit:controlUnit|select_proc_reg_write      ; ControlUnit:controlUnit|WideOr12 ; yes                    ;
-; ControlUnit:controlUnit|exec_process               ; ControlUnit:controlUnit|WideOr10 ; yes                    ;
-; Number of user-specified and inferred latches = 3  ;                                  ;                        ;
-+----------------------------------------------------+----------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------------------------------------+
@@ -5381,7 +5369,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2148  ;
+; Total registers                              ; 2151  ;
 ; Number of registers using Synchronous Clear  ; 13    ;
 ; Number of registers using Synchronous Load   ; 43    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -5406,15 +5394,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JupsCore|RegisterBank:rbank|regs[62][11]    ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JupsCore|RegisterBank:rbank|regs[30][21]    ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |JupsCore|ProgramCounter:pc|PC[19]           ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JupsCore|RegisterBank:rbank|regs[62][27]    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |JupsCore|RegisterBank:rbank|regs[30][14]    ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |JupsCore|ProgramCounter:pc|PC[10]           ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |JupsCore|Out:pcout|ConversorComp2:c2|out[3] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |JupsCore|Out:pcout|ConversorComp2:c2|out[3] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |JupsCore|Mux_32:MuxDataInRB|mux_output[5]   ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |JupsCore|RegisterBank:rbank|Mux24           ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |JupsCore|RegisterBank:rbank|Mux52           ;
-; 18:1               ; 31 bits   ; 372 LEs       ; 124 LEs              ; 248 LEs                ; No         ; |JupsCore|ALU:arilu|Mux5                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |JupsCore|Mux_32:MuxDataInRB|mux_output[24]  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |JupsCore|RegisterBank:rbank|Mux21           ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |JupsCore|RegisterBank:rbank|Mux39           ;
+; 18:1               ; 31 bits   ; 372 LEs       ; 124 LEs              ; 248 LEs                ; No         ; |JupsCore|ALU:arilu|Mux11                    ;
 ; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |JupsCore|ALU:arilu|Add0                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
@@ -5720,28 +5708,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 60                          ;
-; cycloneiii_ff         ; 2148                        ;
+; cycloneiii_ff         ; 2151                        ;
 ;     ENA               ; 2048                        ;
 ;     ENA SLD           ; 32                          ;
 ;     SCLR              ; 2                           ;
 ;     SCLR SLD          ; 11                          ;
-;     plain             ; 55                          ;
-; cycloneiii_lcell_comb ; 5675                        ;
+;     plain             ; 58                          ;
+; cycloneiii_lcell_comb ; 5661                        ;
 ;     arith             ; 725                         ;
 ;         2 data inputs ; 80                          ;
 ;         3 data inputs ; 645                         ;
-;     normal            ; 4950                        ;
+;     normal            ; 4936                        ;
 ;         0 data inputs ; 30                          ;
 ;         1 data inputs ; 16                          ;
-;         2 data inputs ; 139                         ;
-;         3 data inputs ; 1495                        ;
-;         4 data inputs ; 3270                        ;
+;         2 data inputs ; 157                         ;
+;         3 data inputs ; 407                         ;
+;         4 data inputs ; 4326                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 145.50                      ;
-; Average LUT depth     ; 99.28                       ;
+; Max LUT depth         ; 146.50                      ;
+; Average LUT depth     ; 99.81                       ;
 +-----------------------+-----------------------------+
 
 
@@ -5750,7 +5738,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:26     ;
+; Top            ; 00:00:28     ;
 +----------------+--------------+
 
 
@@ -5760,77 +5748,74 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Jan  3 14:22:09 2020
+    Info: Processing started: Sat Jun  6 09:01:33 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JupsCore -c JupsCore
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ConversorBinP2.v
-    Info (12023): Found entity 1: ConversorBinP2 File: /home/julia/Music/JupsCore/ConversorBinP2.v Line: 1
+    Info (12023): Found entity 1: ConversorBinP2 File: /home/julia/Documents/Jups-Core/ConversorBinP2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file InstructionMemory.v
-    Info (12023): Found entity 1: InstructionMemory File: /home/julia/Music/JupsCore/InstructionMemory.v Line: 1
+    Info (12023): Found entity 1: InstructionMemory File: /home/julia/Documents/Jups-Core/InstructionMemory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ProgramCounter.v
-    Info (12023): Found entity 1: ProgramCounter File: /home/julia/Music/JupsCore/ProgramCounter.v Line: 7
+    Info (12023): Found entity 1: ProgramCounter File: /home/julia/Documents/Jups-Core/ProgramCounter.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file RegisterBank.v
-    Info (12023): Found entity 1: RegisterBank File: /home/julia/Music/JupsCore/RegisterBank.v Line: 13
+    Info (12023): Found entity 1: RegisterBank File: /home/julia/Documents/Jups-Core/RegisterBank.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file Extender.v
-    Info (12023): Found entity 1: Extender File: /home/julia/Music/JupsCore/Extender.v Line: 3
+    Info (12023): Found entity 1: Extender File: /home/julia/Documents/Jups-Core/Extender.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file Out.v
-    Info (12023): Found entity 1: Out File: /home/julia/Music/JupsCore/Out.v Line: 1
+    Info (12023): Found entity 1: Out File: /home/julia/Documents/Jups-Core/Out.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ConversorComp2.v
-    Info (12023): Found entity 1: ConversorComp2 File: /home/julia/Music/JupsCore/ConversorComp2.v Line: 1
+    Info (12023): Found entity 1: ConversorComp2 File: /home/julia/Documents/Jups-Core/ConversorComp2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ConversorBCD.v
-    Info (12023): Found entity 1: ConversorBCD File: /home/julia/Music/JupsCore/ConversorBCD.v Line: 1
+    Info (12023): Found entity 1: ConversorBCD File: /home/julia/Documents/Jups-Core/ConversorBCD.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file FrequenceDivider.v
-    Info (12023): Found entity 1: FrequenceDivider File: /home/julia/Music/JupsCore/FrequenceDivider.v Line: 1
+    Info (12023): Found entity 1: FrequenceDivider File: /home/julia/Documents/Jups-Core/FrequenceDivider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file RandomAccessMemory.v
-    Info (12023): Found entity 1: RandomAccessMemory File: /home/julia/Music/JupsCore/RandomAccessMemory.v Line: 9
+    Info (12023): Found entity 1: RandomAccessMemory File: /home/julia/Documents/Jups-Core/RandomAccessMemory.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file ALU.v
-    Info (12023): Found entity 1: ALU File: /home/julia/Music/JupsCore/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: /home/julia/Documents/Jups-Core/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file JupsCore.v
-    Info (12023): Found entity 1: JupsCore File: /home/julia/Music/JupsCore/JupsCore.v Line: 3
+    Info (12023): Found entity 1: JupsCore File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file ControlUnit.v
-    Info (12023): Found entity 1: ControlUnit File: /home/julia/Music/JupsCore/ControlUnit.v Line: 1
+    Info (12023): Found entity 1: ControlUnit File: /home/julia/Documents/Jups-Core/ControlUnit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Display.v
-    Info (12023): Found entity 1: Display File: /home/julia/Music/JupsCore/Display.v Line: 1
+    Info (12023): Found entity 1: Display File: /home/julia/Documents/Jups-Core/Display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file setHalt.v
-    Info (12023): Found entity 1: setHalt File: /home/julia/Music/JupsCore/setHalt.v Line: 1
+    Info (12023): Found entity 1: setHalt File: /home/julia/Documents/Jups-Core/setHalt.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file DeBounce_v.v
-    Info (12023): Found entity 1: DeBounce_v File: /home/julia/Music/JupsCore/DeBounce_v.v Line: 28
+    Info (12023): Found entity 1: DeBounce_v File: /home/julia/Documents/Jups-Core/DeBounce_v.v Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file PCOut.v
-    Info (12023): Found entity 1: PCOut File: /home/julia/Music/JupsCore/PCOut.v Line: 1
+    Info (12023): Found entity 1: PCOut File: /home/julia/Documents/Jups-Core/PCOut.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Mux_32.v
-    Info (12023): Found entity 1: Mux_32 File: /home/julia/Music/JupsCore/Mux_32.v Line: 1
+    Info (12023): Found entity 1: Mux_32 File: /home/julia/Documents/Jups-Core/Mux_32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Mux_5.v
-    Info (12023): Found entity 1: Mux_5 File: /home/julia/Music/JupsCore/Mux_5.v Line: 1
+    Info (12023): Found entity 1: Mux_5 File: /home/julia/Documents/Jups-Core/Mux_5.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Mux_16.v
-    Info (12023): Found entity 1: Mux_16 File: /home/julia/Music/JupsCore/Mux_16.v Line: 1
+    Info (12023): Found entity 1: Mux_16 File: /home/julia/Documents/Jups-Core/Mux_16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Mux_PC.v
-    Info (12023): Found entity 1: Mux_PC File: /home/julia/Music/JupsCore/Mux_PC.v Line: 1
+    Info (12023): Found entity 1: Mux_PC File: /home/julia/Documents/Jups-Core/Mux_PC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ControlSignalMemomry.v
+    Info (12023): Found entity 1: ControlSignalMemomry File: /home/julia/Documents/Jups-Core/ControlSignalMemomry.v Line: 1
 Info (12127): Elaborating entity "JupsCore" for the top level hierarchy
-Info (12128): Elaborating entity "FrequenceDivider" for hierarchy "FrequenceDivider:fd" File: /home/julia/Music/JupsCore/JupsCore.v Line: 21
-Info (12128): Elaborating entity "DeBounce_v" for hierarchy "DeBounce_v:DB" File: /home/julia/Music/JupsCore/JupsCore.v Line: 27
-Info (12128): Elaborating entity "Mux_32" for hierarchy "Mux_32:MuxAddrJump" File: /home/julia/Music/JupsCore/JupsCore.v Line: 33
-Info (12128): Elaborating entity "Mux_PC" for hierarchy "Mux_PC:MuxPC" File: /home/julia/Music/JupsCore/JupsCore.v Line: 40
-Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: /home/julia/Music/JupsCore/JupsCore.v Line: 52
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:istM" File: /home/julia/Music/JupsCore/JupsCore.v Line: 58
-Warning (10030): Net "InstMem[799..706]" at InstructionMemory.v(5) has no driver or initial value, using a default initial value '0' File: /home/julia/Music/JupsCore/InstructionMemory.v Line: 5
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:controlUnit" File: /home/julia/Music/JupsCore/JupsCore.v Line: 79
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(8): inferring latch(es) for variable "exec_process", which holds its previous value in one or more paths through the always construct File: /home/julia/Music/JupsCore/ControlUnit.v Line: 8
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(8): inferring latch(es) for variable "select_proc_reg_write", which holds its previous value in one or more paths through the always construct File: /home/julia/Music/JupsCore/ControlUnit.v Line: 8
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(8): inferring latch(es) for variable "select_proc_reg_read", which holds its previous value in one or more paths through the always construct File: /home/julia/Music/JupsCore/ControlUnit.v Line: 8
-Info (10041): Inferred latch for "select_proc_reg_read" at ControlUnit.v(8) File: /home/julia/Music/JupsCore/ControlUnit.v Line: 8
-Info (10041): Inferred latch for "select_proc_reg_write" at ControlUnit.v(8) File: /home/julia/Music/JupsCore/ControlUnit.v Line: 8
-Info (10041): Inferred latch for "exec_process" at ControlUnit.v(8) File: /home/julia/Music/JupsCore/ControlUnit.v Line: 8
-Info (12128): Elaborating entity "RandomAccessMemory" for hierarchy "RandomAccessMemory:RAM" File: /home/julia/Music/JupsCore/JupsCore.v Line: 88
-Info (12128): Elaborating entity "Mux_16" for hierarchy "Mux_16:MuxExtender" File: /home/julia/Music/JupsCore/JupsCore.v Line: 94
-Info (12128): Elaborating entity "Extender" for hierarchy "Extender:ext" File: /home/julia/Music/JupsCore/JupsCore.v Line: 98
-Info (12128): Elaborating entity "Mux_5" for hierarchy "Mux_5:MuxRegDest" File: /home/julia/Music/JupsCore/JupsCore.v Line: 110
-Info (12128): Elaborating entity "RegisterBank" for hierarchy "RegisterBank:rbank" File: /home/julia/Music/JupsCore/JupsCore.v Line: 126
-Info (12128): Elaborating entity "Out" for hierarchy "Out:out" File: /home/julia/Music/JupsCore/JupsCore.v Line: 133
-Info (12128): Elaborating entity "ConversorComp2" for hierarchy "Out:out|ConversorComp2:c2" File: /home/julia/Music/JupsCore/Out.v Line: 9
-Info (12128): Elaborating entity "ConversorBCD" for hierarchy "Out:out|ConversorBCD:cBCD" File: /home/julia/Music/JupsCore/Out.v Line: 11
-Info (12128): Elaborating entity "Display" for hierarchy "Out:out|Display:d1" File: /home/julia/Music/JupsCore/Out.v Line: 13
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:arilu" File: /home/julia/Music/JupsCore/JupsCore.v Line: 147
+Info (12128): Elaborating entity "FrequenceDivider" for hierarchy "FrequenceDivider:fd" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 21
+Info (12128): Elaborating entity "DeBounce_v" for hierarchy "DeBounce_v:DB" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 27
+Info (12128): Elaborating entity "Mux_32" for hierarchy "Mux_32:MuxAddrJump" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 33
+Info (12128): Elaborating entity "Mux_PC" for hierarchy "Mux_PC:MuxPC" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 40
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 52
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:istM" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 58
+Warning (10030): Net "InstMem[799..706]" at InstructionMemory.v(5) has no driver or initial value, using a default initial value '0' File: /home/julia/Documents/Jups-Core/InstructionMemory.v Line: 5
+Info (12128): Elaborating entity "ControlSignalMemomry" for hierarchy "ControlSignalMemomry:csm" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 67
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:controlUnit" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 92
+Info (12128): Elaborating entity "RandomAccessMemory" for hierarchy "RandomAccessMemory:RAM" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 101
+Info (12128): Elaborating entity "Mux_16" for hierarchy "Mux_16:MuxExtender" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 107
+Info (12128): Elaborating entity "Extender" for hierarchy "Extender:ext" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 111
+Info (12128): Elaborating entity "Mux_5" for hierarchy "Mux_5:MuxRegDest" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 123
+Info (12128): Elaborating entity "RegisterBank" for hierarchy "RegisterBank:rbank" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 139
+Info (12128): Elaborating entity "Out" for hierarchy "Out:out" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 146
+Info (12128): Elaborating entity "ConversorComp2" for hierarchy "Out:out|ConversorComp2:c2" File: /home/julia/Documents/Jups-Core/Out.v Line: 9
+Info (12128): Elaborating entity "ConversorBCD" for hierarchy "Out:out|ConversorBCD:cBCD" File: /home/julia/Documents/Jups-Core/Out.v Line: 11
+Info (12128): Elaborating entity "Display" for hierarchy "Out:out|Display:d1" File: /home/julia/Documents/Jups-Core/Out.v Line: 13
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:arilu" File: /home/julia/Documents/Jups-Core/JupsCore.v Line: 160
 Warning (276027): Inferred dual-clock RAM node "RandomAccessMemory:RAM|RAM_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "RandomAccessMemory:RAM|Stack_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 2 megafunctions from design logic
@@ -5865,8 +5850,8 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:arilu|Div0" File: /home/julia/Music/JupsCore/ALU.v Line: 16
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ALU:arilu|Mult0" File: /home/julia/Music/JupsCore/ALU.v Line: 15
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:arilu|Div0" File: /home/julia/Documents/Jups-Core/ALU.v Line: 16
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ALU:arilu|Mult0" File: /home/julia/Documents/Jups-Core/ALU.v Line: 15
 Info (12130): Elaborated megafunction instantiation "RandomAccessMemory:RAM|altsyncram:RAM_rtl_0"
 Info (12133): Instantiated megafunction "RandomAccessMemory:RAM|altsyncram:RAM_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -5884,25 +5869,25 @@ Info (12133): Instantiated megafunction "RandomAccessMemory:RAM|altsyncram:RAM_r
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o2d1.tdf
-    Info (12023): Found entity 1: altsyncram_o2d1 File: /home/julia/Music/JupsCore/db/altsyncram_o2d1.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "ALU:arilu|lpm_divide:Div0" File: /home/julia/Music/JupsCore/ALU.v Line: 16
-Info (12133): Instantiated megafunction "ALU:arilu|lpm_divide:Div0" with the following parameter: File: /home/julia/Music/JupsCore/ALU.v Line: 16
+    Info (12023): Found entity 1: altsyncram_o2d1 File: /home/julia/Documents/Jups-Core/db/altsyncram_o2d1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "ALU:arilu|lpm_divide:Div0" File: /home/julia/Documents/Jups-Core/ALU.v Line: 16
+Info (12133): Instantiated megafunction "ALU:arilu|lpm_divide:Div0" with the following parameter: File: /home/julia/Documents/Jups-Core/ALU.v Line: 16
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hkm.tdf
-    Info (12023): Found entity 1: lpm_divide_hkm File: /home/julia/Music/JupsCore/db/lpm_divide_hkm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_hkm File: /home/julia/Documents/Jups-Core/db/lpm_divide_hkm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh File: /home/julia/Music/JupsCore/db/sign_div_unsign_9nh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: /home/julia/Documents/Jups-Core/db/sign_div_unsign_9nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6af.tdf
-    Info (12023): Found entity 1: alt_u_div_6af File: /home/julia/Music/JupsCore/db/alt_u_div_6af.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_6af File: /home/julia/Documents/Jups-Core/db/alt_u_div_6af.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: /home/julia/Music/JupsCore/db/add_sub_7pc.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_7pc File: /home/julia/Documents/Jups-Core/db/add_sub_7pc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: /home/julia/Music/JupsCore/db/add_sub_8pc.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "ALU:arilu|lpm_mult:Mult0" File: /home/julia/Music/JupsCore/ALU.v Line: 15
-Info (12133): Instantiated megafunction "ALU:arilu|lpm_mult:Mult0" with the following parameter: File: /home/julia/Music/JupsCore/ALU.v Line: 15
+    Info (12023): Found entity 1: add_sub_8pc File: /home/julia/Documents/Jups-Core/db/add_sub_8pc.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "ALU:arilu|lpm_mult:Mult0" File: /home/julia/Documents/Jups-Core/ALU.v Line: 15
+Info (12133): Instantiated megafunction "ALU:arilu|lpm_mult:Mult0" with the following parameter: File: /home/julia/Documents/Jups-Core/ALU.v Line: 15
     Info (12134): Parameter "LPM_WIDTHA" = "32"
     Info (12134): Parameter "LPM_WIDTHB" = "32"
     Info (12134): Parameter "LPM_WIDTHP" = "64"
@@ -5913,39 +5898,33 @@ Info (12133): Instantiated megafunction "ALU:arilu|lpm_mult:Mult0" with the foll
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
-    Info (12023): Found entity 1: mult_7dt File: /home/julia/Music/JupsCore/db/mult_7dt.tdf Line: 30
+    Info (12023): Found entity 1: mult_7dt File: /home/julia/Documents/Jups-Core/db/mult_7dt.tdf Line: 30
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following DSP element node(s):
-        Warning (14320): Synthesized away node "ALU:arilu|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: /home/julia/Music/JupsCore/db/mult_7dt.tdf Line: 66
-        Warning (14320): Synthesized away node "ALU:arilu|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8" File: /home/julia/Music/JupsCore/db/mult_7dt.tdf Line: 90
+        Warning (14320): Synthesized away node "ALU:arilu|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: /home/julia/Documents/Jups-Core/db/mult_7dt.tdf Line: 66
+        Warning (14320): Synthesized away node "ALU:arilu|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8" File: /home/julia/Documents/Jups-Core/db/mult_7dt.tdf Line: 90
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
-Warning (13012): Latch ControlUnit:controlUnit|select_proc_reg_read has unsafe behavior File: /home/julia/Music/JupsCore/ControlUnit.v Line: 5
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal InstructionMemory:istM|Instruction[26] File: /home/julia/Music/JupsCore/InstructionMemory.v Line: 780
-Warning (13012): Latch ControlUnit:controlUnit|select_proc_reg_write has unsafe behavior File: /home/julia/Music/JupsCore/ControlUnit.v Line: 5
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal InstructionMemory:istM|Instruction[26] File: /home/julia/Music/JupsCore/InstructionMemory.v Line: 780
-Warning (13012): Latch ControlUnit:controlUnit|exec_process has unsafe behavior File: /home/julia/Music/JupsCore/ControlUnit.v Line: 5
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal InstructionMemory:istM|Instruction[30] File: /home/julia/Music/JupsCore/InstructionMemory.v Line: 780
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file /home/julia/Music/JupsCore/output_files/JupsCore.map.smsg
+Info (144001): Generated suppressed messages file /home/julia/Documents/Jups-Core/output_files/JupsCore.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7812 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7800 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 7682 logic cells
+    Info (21061): Implemented 7670 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 1052 megabytes
-    Info: Processing ended: Fri Jan  3 14:22:55 2020
-    Info: Elapsed time: 00:00:46
-    Info: Total CPU time (on all processors): 00:01:05
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 1046 megabytes
+    Info: Processing ended: Sat Jun  6 09:02:23 2020
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:01:10
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/julia/Music/JupsCore/output_files/JupsCore.map.smsg.
+The suppressed messages can be found in /home/julia/Documents/Jups-Core/output_files/JupsCore.map.smsg.
 
 

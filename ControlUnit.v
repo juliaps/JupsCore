@@ -1,5 +1,5 @@
-module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, In, Jal, Jr, Jump, Write, WriteMem, useStk, type_r,exec_process, select_proc_reg_write , select_proc_reg_read);
-	input Button;
+module ControlUnit (Button, curr_exec_process, curr_select_proc_reg_write, curr_select_proc_reg_read, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, In, Jal, Jr, Jump, Write, WriteMem, useStk, type_r,exec_process, select_proc_reg_write , select_proc_reg_read);
+	input Button, curr_exec_process, curr_select_proc_reg_write, curr_select_proc_reg_read;
 	input [5:0] Opcode;
 	output reg [4:0] alu_code;
 	output reg ALU, branch, change_pc, Halt, Im, In, Jal, Jr, Jump, Write, WriteMem, useStk, type_r, exec_process, select_proc_reg_write , select_proc_reg_read ;
@@ -24,9 +24,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b000010 : //add
@@ -47,9 +47,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b000011 : //sub
@@ -70,9 +70,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b010100 : //addi
@@ -93,9 +93,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b1;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b010101 : //subi
@@ -116,9 +116,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b1;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b000110: //mov
@@ -139,9 +139,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b1;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b000100: //mult
@@ -162,9 +162,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b000101: //div
@@ -185,9 +185,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b010001: //bneq
@@ -208,9 +208,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b010000: //beq 
@@ -231,9 +231,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b1;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b010010: //slt
@@ -254,9 +254,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b010011: //sgt
@@ -277,9 +277,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b010111: //slet
@@ -300,9 +300,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b011000: //sget
@@ -323,9 +323,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b001011: //in
@@ -348,9 +348,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				branch = 1'b0;
 				if (Button) Halt = 1'b0;
 				else Halt = 1'b1;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b001100: //out
@@ -373,9 +373,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				branch = 1'b0;
 				if (Button) Halt = 1'b0;
 				else Halt = 1'b1;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				//end
 				end
@@ -397,9 +397,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b1; //verificar segybdi a logica
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b001000: //sw
@@ -420,9 +420,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b1;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b001101: //jr
@@ -443,9 +443,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b001110: //j
@@ -466,9 +466,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b001111: //jal
@@ -489,9 +489,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b010110: //loadi
@@ -512,9 +512,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b1;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b001001: //push
@@ -535,9 +535,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b1;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b001010: //pop
@@ -558,9 +558,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b1;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b011001: //syscall
@@ -581,7 +581,7 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b1;
 				branch = 1'b0;
-				exec_process = exec_process;
+				exec_process = curr_exec_process;
 				select_proc_reg_write = 1'b0;
 				select_proc_reg_read = 1'b0;
 				change_pc = 1'b0;
@@ -627,9 +627,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
+				exec_process = curr_exec_process;
 				select_proc_reg_write = 1'b1;
-				select_proc_reg_read = select_proc_reg_read;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b011100: //enable_read_proc
@@ -650,8 +650,8 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write;
 				select_proc_reg_read = 1'b1;
 				change_pc = 1'b0;
 				end
@@ -674,7 +674,7 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_in = 1'b0;
 				branch = 1'b0;
 				exec_process = 1'b1;
-				select_proc_reg_write = select_proc_reg_write;
+				select_proc_reg_write = curr_select_proc_reg_write;
 				select_proc_reg_read = 1'b0;
 				change_pc = 1'b0;
 				end
@@ -698,7 +698,7 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				branch = 1'b0;
 				exec_process = 1'b1;
 				select_proc_reg_write = 1'b0;
-				select_proc_reg_read = select_proc_reg_read;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 			6'b011111: //set_so_pc
@@ -742,9 +742,9 @@ module ControlUnit (Button, Opcode, alu_code, ALU, branch, change_pc, Halt, Im, 
 				//type_i = 1'b0;
 				//type_in = 1'b0;
 				branch = 1'b0;
-				exec_process = exec_process;
-				select_proc_reg_write = select_proc_reg_write ;
-				select_proc_reg_read = select_proc_reg_read;
+				exec_process = curr_exec_process;
+				select_proc_reg_write = curr_select_proc_reg_write ;
+				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;
 				end
 		endcase
