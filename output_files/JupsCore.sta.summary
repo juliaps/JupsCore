@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'FrequenceDivider:fd|Clock'
-Slack : -137.987
-TNS   : -149579.659
+Slack : -134.017
+TNS   : -21649.802
 
 Type  : Slow 1200mV 85C Model Setup 'AutoClock'
-Slack : -133.339
-TNS   : -823.594
+Slack : -128.239
+TNS   : -611.094
 
 Type  : Slow 1200mV 85C Model Hold 'AutoClock'
-Slack : 0.404
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'FrequenceDivider:fd|Clock'
-Slack : 1.241
+Slack : 1.347
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AutoClock'
 Slack : -3.000
-TNS   : -101.152
+TNS   : -78.022
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
 Slack : -2.693
-TNS   : -2708.971
+TNS   : -402.396
 
 Type  : Slow 1200mV 0C Model Setup 'FrequenceDivider:fd|Clock'
-Slack : -124.546
-TNS   : -135420.910
+Slack : -120.927
+TNS   : -19568.859
 
 Type  : Slow 1200mV 0C Model Setup 'AutoClock'
-Slack : -120.324
-TNS   : -740.462
+Slack : -115.581
+TNS   : -546.532
 
 Type  : Slow 1200mV 0C Model Hold 'AutoClock'
-Slack : 0.356
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'FrequenceDivider:fd|Clock'
-Slack : 1.132
+Slack : 1.240
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AutoClock'
 Slack : -3.000
-TNS   : -100.976
+TNS   : -77.846
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
 Slack : -2.649
-TNS   : -2708.443
+TNS   : -401.868
 
 Type  : Fast 1200mV 0C Model Setup 'FrequenceDivider:fd|Clock'
-Slack : -67.769
-TNS   : -73402.947
+Slack : -65.962
+TNS   : -10571.482
 
 Type  : Fast 1200mV 0C Model Setup 'AutoClock'
-Slack : -65.633
-TNS   : -378.818
+Slack : -63.117
+TNS   : -276.724
 
 Type  : Fast 1200mV 0C Model Hold 'AutoClock'
-Slack : 0.183
+Slack : 0.182
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'FrequenceDivider:fd|Clock'
-Slack : 0.559
+Slack : 0.598
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AutoClock'
 Slack : -3.000
-TNS   : -80.203
+TNS   : -60.580
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FrequenceDivider:fd|Clock'
 Slack : -1.000
-TNS   : -2095.000
+TNS   : -300.000
 
 ------------------------------------------------------------

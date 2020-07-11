@@ -32,21 +32,21 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 							  .mux_output(addrJump)
 	);
 	
-	Mux_PC MuxPC( 		 .input_1(data1),
-							 .input_2(data2),
-							 .set(change_pc),
-							 .flag(exec_process),
-							 .mux_output(pc_in)
-	);
+	//Mux_PC MuxPC( 		 .input_1(data1),
+		//					 .input_2(data2),
+		//					 .set(change_pc),
+		//					 .flag(exec_process),
+		//					 .mux_output(pc_in)
+	//);
 	
 	ProgramCounter pc( .Clock(clk),
 							 .j(j),
 							 .jr(jr),
 							 .zero(zero),
 							 .branch(branch),
-							 .change_pc(change_pc),
+							// .change_pc(change_pc),
 							 .AddressJump(addrJump),
-							 .pc_in(pc_in),
+							// .pc_in(pc_in),
 							 .Halt(halt),
 							 .pc_out(programCounter)
 	);
@@ -57,25 +57,25 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 								   .Instruction(Instruction)
 	);
 	
-	ControlSignalMemomry csm(  .clk(clk),
-										.exec_process_in(exec_process),
-										.select_proc_reg_write_in(select_proc_reg_write),
-										.select_proc_reg_read_in(select_proc_reg_read),
-										.exec_process_out(curr_exec_process),
-										.select_proc_reg_write_out(curr_select_proc_reg_write),
-										.select_proc_reg_read_out(curr_select_proc_reg_read)
-	);
+	//ControlSignalMemomry csm(  .clk(clk),
+	//									.exec_process_in(exec_process),
+	//									.select_proc_reg_write_in(select_proc_reg_write),
+	//									.select_proc_reg_read_in(select_proc_reg_read),
+	//									.exec_process_out(curr_exec_process),
+	//									.select_proc_reg_write_out(curr_select_proc_reg_write),
+	//									.select_proc_reg_read_out(curr_select_proc_reg_read)
+	//);
 
 	
 	ControlUnit controlUnit(  .Button(~bounceButton),
-									  .curr_exec_process(curr_exec_process),
-									  .curr_select_proc_reg_write(curr_select_proc_reg_write),
-									  .curr_select_proc_reg_read(curr_select_proc_reg_read),
+									 // .curr_exec_process(curr_exec_process),
+									 // .curr_select_proc_reg_write(curr_select_proc_reg_write),
+									 // .curr_select_proc_reg_read(curr_select_proc_reg_read),
 									  .Opcode(Instruction[31:26]),
 									  .alu_code(aluCode),
 									  .ALU(alu),
 									  .branch(branch),
-									  .change_pc(change_pc),
+									 // .change_pc(change_pc),
 									  .Halt(halt),
 									  .Im(im),
 									  .In(in),
@@ -85,10 +85,10 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 									  .Write(write),
 									  .WriteMem(writemem),
 									  .useStk(usestk),
-									  .type_r(type_r),
-									  .exec_process(exec_process),
-									  .select_proc_reg_read(select_proc_reg_read),
-									  .select_proc_reg_write(select_proc_reg_write)
+									  .type_r(type_r)
+									 // .exec_process(exec_process),
+									 // .select_proc_reg_read(select_proc_reg_read),
+									 // .select_proc_reg_write(select_proc_reg_write)
 	);
 	
 	RandomAccessMemory RAM( .DataIn(data2),
@@ -131,8 +131,8 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 								.AddrWrite(AddrWrite),
 								.ProgramCounter(programCounter),
 								.DataIn(datain),
-								.select_proc_reg_read(select_proc_reg_read),
-								.select_proc_reg_write(select_proc_reg_write),
+								//.select_proc_reg_read(select_proc_reg_read),
+								//.select_proc_reg_write(select_proc_reg_write),
 								.Data1(data1),
 								.Data2(data2),
 								.Data3(data3)
