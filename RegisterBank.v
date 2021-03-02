@@ -10,8 +10,8 @@
 // Data2: address data the second address
 // Data3: data to be write in the register ban
 
-module RegisterBank(Clock, jal, Write, Addr1, Addr2, Addr3, AddrWrite, ProgramCounter, DataIn, select_proc_reg_read, select_proc_reg_write , Data1, Data2, Data3);
-	input Clock, jal, Write, select_proc_reg_read, select_proc_reg_write;
+module RegisterBank(Clock, jal, Write, Addr1, Addr2, Addr3, AddrWrite, ProgramCounter, DataIn, select_proc_reg_read, select_proc_reg_write , change_so, end_proc , Data1, Data2, Data3);
+	input Clock, jal, Write, select_proc_reg_read, select_proc_reg_write, change_so, end_proc;
 	input  [4:0] Addr1, Addr2, Addr3, AddrWrite;
 	input  [31:0] ProgramCounter, DataIn;
 	output [31:0] Data1, Data2, Data3;
@@ -20,6 +20,14 @@ module RegisterBank(Clock, jal, Write, Addr1, Addr2, Addr3, AddrWrite, ProgramCo
 	always @(posedge Clock) begin
 		if (jal) begin
 			regs[30 + (32 * select_proc_reg_write)] <= ProgramCounter + 1'b1;
+		end
+		
+		if (change_so) begin
+			regs[26] <= ProgramCounter;
+		end
+		
+		if(end_proc) begin
+			regs[25] <= end_proc;
 		end
 		
 		if (Write) begin

@@ -18,160 +18,392 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/16/2019 16:03:58"
+// Generated on "02/09/2021 22:43:15"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          JupsCore
+// Verilog Test Bench (with test vectors) for design :                          ALU
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module JupsCore_vlg_vec_tst();
+module ALU_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg AutoClock;
-reg Button;
-reg [15:0] Switches;
-reg clk;
+reg [31:0] Data1;
+reg [31:0] Data2;
+reg [4:0] alu_code;
 // wires                                               
-wire [31:0] Data2;
-wire [6:0] Display1;
-wire [6:0] Display2;
-wire [6:0] Display3;
-wire [6:0] dPC1;
-wire [6:0] dPC2;
-wire [31:0] data1;
-wire [31:0] data3;
-wire [31:0] dataALU;
-wire halt;
-wire [31:0] programCounter;
+wire [31:0] OutALU;
+wire zero;
 
 // assign statements (if any)                          
-JupsCore i1 (
+ALU i1 (
 // port map - connection between master ports and signals/registers   
-	.AutoClock(AutoClock),
-	.Button(Button),
+	.Data1(Data1),
 	.Data2(Data2),
-	.Display1(Display1),
-	.Display2(Display2),
-	.Display3(Display3),
-	.Switches(Switches),
-	.clk(clk),
-	.dPC1(dPC1),
-	.dPC2(dPC2),
-	.data1(data1),
-	.data3(data3),
-	.dataALU(dataALU),
-	.halt(halt),
-	.programCounter(programCounter)
+	.OutALU(OutALU),
+	.alu_code(alu_code),
+	.zero(zero)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
-
-// AutoClock
+// Data1[ 31 ]
+initial
+begin
+	Data1[31] = 1'b0;
+end 
+// Data1[ 30 ]
+initial
+begin
+	Data1[30] = 1'b0;
+end 
+// Data1[ 29 ]
+initial
+begin
+	Data1[29] = 1'b0;
+end 
+// Data1[ 28 ]
+initial
+begin
+	Data1[28] = 1'b0;
+end 
+// Data1[ 27 ]
+initial
+begin
+	Data1[27] = 1'b0;
+end 
+// Data1[ 26 ]
+initial
+begin
+	Data1[26] = 1'b0;
+end 
+// Data1[ 25 ]
+initial
+begin
+	Data1[25] = 1'b0;
+end 
+// Data1[ 24 ]
+initial
+begin
+	Data1[24] = 1'b0;
+end 
+// Data1[ 23 ]
+initial
+begin
+	Data1[23] = 1'b0;
+end 
+// Data1[ 22 ]
+initial
+begin
+	Data1[22] = 1'b0;
+end 
+// Data1[ 21 ]
+initial
+begin
+	Data1[21] = 1'b0;
+end 
+// Data1[ 20 ]
+initial
+begin
+	Data1[20] = 1'b0;
+end 
+// Data1[ 19 ]
+initial
+begin
+	Data1[19] = 1'b0;
+end 
+// Data1[ 18 ]
+initial
+begin
+	Data1[18] = 1'b0;
+end 
+// Data1[ 17 ]
+initial
+begin
+	Data1[17] = 1'b0;
+end 
+// Data1[ 16 ]
+initial
+begin
+	Data1[16] = 1'b0;
+end 
+// Data1[ 15 ]
+initial
+begin
+	Data1[15] = 1'b0;
+end 
+// Data1[ 14 ]
+initial
+begin
+	Data1[14] = 1'b0;
+end 
+// Data1[ 13 ]
+initial
+begin
+	Data1[13] = 1'b0;
+end 
+// Data1[ 12 ]
+initial
+begin
+	Data1[12] = 1'b0;
+end 
+// Data1[ 11 ]
+initial
+begin
+	Data1[11] = 1'b0;
+end 
+// Data1[ 10 ]
+initial
+begin
+	Data1[10] = 1'b0;
+end 
+// Data1[ 9 ]
+initial
+begin
+	Data1[9] = 1'b0;
+end 
+// Data1[ 8 ]
+initial
+begin
+	Data1[8] = 1'b0;
+end 
+// Data1[ 7 ]
+initial
+begin
+	Data1[7] = 1'b0;
+end 
+// Data1[ 6 ]
+initial
+begin
+	Data1[6] = 1'b0;
+end 
+// Data1[ 5 ]
+initial
+begin
+	Data1[5] = 1'b0;
+end 
+// Data1[ 4 ]
+initial
+begin
+	Data1[4] = 1'b0;
+end 
+// Data1[ 3 ]
+initial
+begin
+	Data1[3] = 1'b0;
+end 
+// Data1[ 2 ]
+initial
+begin
+	Data1[2] = 1'b1;
+end 
+// Data1[ 1 ]
+initial
+begin
+	Data1[1] = 1'b0;
+end 
+// Data1[ 0 ]
+initial
+begin
+	Data1[0] = 1'b1;
+end 
+// Data2[ 31 ]
+initial
+begin
+	Data2[31] = 1'b0;
+end 
+// Data2[ 30 ]
+initial
+begin
+	Data2[30] = 1'b0;
+end 
+// Data2[ 29 ]
+initial
+begin
+	Data2[29] = 1'b0;
+end 
+// Data2[ 28 ]
+initial
+begin
+	Data2[28] = 1'b0;
+end 
+// Data2[ 27 ]
+initial
+begin
+	Data2[27] = 1'b0;
+end 
+// Data2[ 26 ]
+initial
+begin
+	Data2[26] = 1'b0;
+end 
+// Data2[ 25 ]
+initial
+begin
+	Data2[25] = 1'b0;
+end 
+// Data2[ 24 ]
+initial
+begin
+	Data2[24] = 1'b0;
+end 
+// Data2[ 23 ]
+initial
+begin
+	Data2[23] = 1'b0;
+end 
+// Data2[ 22 ]
+initial
+begin
+	Data2[22] = 1'b0;
+end 
+// Data2[ 21 ]
+initial
+begin
+	Data2[21] = 1'b0;
+end 
+// Data2[ 20 ]
+initial
+begin
+	Data2[20] = 1'b0;
+end 
+// Data2[ 19 ]
+initial
+begin
+	Data2[19] = 1'b0;
+end 
+// Data2[ 18 ]
+initial
+begin
+	Data2[18] = 1'b0;
+end 
+// Data2[ 17 ]
+initial
+begin
+	Data2[17] = 1'b0;
+end 
+// Data2[ 16 ]
+initial
+begin
+	Data2[16] = 1'b0;
+end 
+// Data2[ 15 ]
+initial
+begin
+	Data2[15] = 1'b0;
+end 
+// Data2[ 14 ]
+initial
+begin
+	Data2[14] = 1'b0;
+end 
+// Data2[ 13 ]
+initial
+begin
+	Data2[13] = 1'b0;
+end 
+// Data2[ 12 ]
+initial
+begin
+	Data2[12] = 1'b0;
+end 
+// Data2[ 11 ]
+initial
+begin
+	Data2[11] = 1'b0;
+end 
+// Data2[ 10 ]
+initial
+begin
+	Data2[10] = 1'b0;
+end 
+// Data2[ 9 ]
+initial
+begin
+	Data2[9] = 1'b0;
+end 
+// Data2[ 8 ]
+initial
+begin
+	Data2[8] = 1'b0;
+end 
+// Data2[ 7 ]
+initial
+begin
+	Data2[7] = 1'b0;
+end 
+// Data2[ 6 ]
+initial
+begin
+	Data2[6] = 1'b0;
+end 
+// Data2[ 5 ]
+initial
+begin
+	Data2[5] = 1'b0;
+end 
+// Data2[ 4 ]
+initial
+begin
+	Data2[4] = 1'b0;
+end 
+// Data2[ 3 ]
+initial
+begin
+	Data2[3] = 1'b0;
+end 
+// Data2[ 2 ]
+initial
+begin
+	Data2[2] = 1'b1;
+end 
+// Data2[ 1 ]
+initial
+begin
+	Data2[1] = 1'b1;
+end 
+// Data2[ 0 ]
+initial
+begin
+	Data2[0] = 1'b1;
+end 
+// alu_code[ 4 ]
+initial
+begin
+	alu_code[4] = 1'b0;
+end 
+// alu_code[ 3 ]
+initial
+begin
+	alu_code[3] = 1'b0;
+	alu_code[3] = #800000 1'b1;
+end 
+// alu_code[ 2 ]
+initial
+begin
+	alu_code[2] = 1'b0;
+	alu_code[2] = #400000 1'b1;
+	alu_code[2] = #400000 1'b0;
+end 
+// alu_code[ 1 ]
+initial
+begin
+	repeat(2)
+	begin
+		alu_code[1] = 1'b0;
+		alu_code[1] = #200000 1'b1;
+		# 200000;
+	end
+	alu_code[1] = 1'b0;
+end 
+// alu_code[ 0 ]
 always
 begin
-	AutoClock = 1'b0;
-	AutoClock = #50 1'b1;
-	#50;
-end 
-
-// Button
-initial
-begin
-	Button = 1'b0;
-	Button = #90000 1'b1;
-	Button = #170000 1'b0;
-end 
-// Switches[ 15 ]
-initial
-begin
-	Switches[15] = 1'b0;
-end 
-// Switches[ 14 ]
-initial
-begin
-	Switches[14] = 1'b0;
-end 
-// Switches[ 13 ]
-initial
-begin
-	Switches[13] = 1'b0;
-end 
-// Switches[ 12 ]
-initial
-begin
-	Switches[12] = 1'b0;
-end 
-// Switches[ 11 ]
-initial
-begin
-	Switches[11] = 1'b0;
-end 
-// Switches[ 10 ]
-initial
-begin
-	Switches[10] = 1'b0;
-end 
-// Switches[ 9 ]
-initial
-begin
-	Switches[9] = 1'b0;
-end 
-// Switches[ 8 ]
-initial
-begin
-	Switches[8] = 1'b0;
-end 
-// Switches[ 7 ]
-initial
-begin
-	Switches[7] = 1'b0;
-end 
-// Switches[ 6 ]
-initial
-begin
-	Switches[6] = 1'b0;
-end 
-// Switches[ 5 ]
-initial
-begin
-	Switches[5] = 1'b0;
-end 
-// Switches[ 4 ]
-initial
-begin
-	Switches[4] = 1'b0;
-end 
-// Switches[ 3 ]
-initial
-begin
-	Switches[3] = 1'b0;
-end 
-// Switches[ 2 ]
-initial
-begin
-	Switches[2] = 1'b0;
-end 
-// Switches[ 1 ]
-initial
-begin
-	Switches[1] = 1'b1;
-end 
-// Switches[ 0 ]
-initial
-begin
-	Switches[0] = 1'b0;
-end 
-
-// clk
-always
-begin
-	clk = 1'b0;
-	clk = #50000 1'b1;
-	#50000;
+	alu_code[0] = 1'b0;
+	alu_code[0] = #100000 1'b1;
+	#100000;
 end 
 endmodule
 

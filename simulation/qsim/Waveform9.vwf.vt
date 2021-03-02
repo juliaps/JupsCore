@@ -18,160 +18,397 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/16/2019 17:30:50"
+// Generated on "02/21/2021 17:13:04"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          JupsCore
+// Verilog Test Bench (with test vectors) for design :                          RandomAccessMemory
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module JupsCore_vlg_vec_tst();
+module RandomAccessMemory_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg AutoClock;
-reg Button;
-reg [15:0] Switches;
-reg clk;
+reg [31:0] Addr;
+reg Clock;
+reg ClockAuto;
+reg [31:0] DataIn;
+reg WriteMem;
+reg useStk;
 // wires                                               
-wire [31:0] Data2;
-wire [6:0] Display1;
-wire [6:0] Display2;
-wire [6:0] Display3;
-wire [6:0] dPC1;
-wire [6:0] dPC2;
-wire [31:0] data1;
-wire [31:0] data3;
-wire [31:0] dataALU;
-wire halt;
-wire [31:0] programCounter;
+wire [31:0] DataOut;
 
 // assign statements (if any)                          
-JupsCore i1 (
+RandomAccessMemory i1 (
 // port map - connection between master ports and signals/registers   
-	.AutoClock(AutoClock),
-	.Button(Button),
-	.Data2(Data2),
-	.Display1(Display1),
-	.Display2(Display2),
-	.Display3(Display3),
-	.Switches(Switches),
-	.clk(clk),
-	.dPC1(dPC1),
-	.dPC2(dPC2),
-	.data1(data1),
-	.data3(data3),
-	.dataALU(dataALU),
-	.halt(halt),
-	.programCounter(programCounter)
+	.Addr(Addr),
+	.Clock(Clock),
+	.ClockAuto(ClockAuto),
+	.DataIn(DataIn),
+	.DataOut(DataOut),
+	.WriteMem(WriteMem),
+	.useStk(useStk)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
+// Addr[ 31 ]
+initial
+begin
+	Addr[31] = 1'b0;
+end 
+// Addr[ 30 ]
+initial
+begin
+	Addr[30] = 1'b0;
+end 
+// Addr[ 29 ]
+initial
+begin
+	Addr[29] = 1'b0;
+end 
+// Addr[ 28 ]
+initial
+begin
+	Addr[28] = 1'b0;
+end 
+// Addr[ 27 ]
+initial
+begin
+	Addr[27] = 1'b0;
+end 
+// Addr[ 26 ]
+initial
+begin
+	Addr[26] = 1'b0;
+end 
+// Addr[ 25 ]
+initial
+begin
+	Addr[25] = 1'b0;
+end 
+// Addr[ 24 ]
+initial
+begin
+	Addr[24] = 1'b0;
+end 
+// Addr[ 23 ]
+initial
+begin
+	Addr[23] = 1'b0;
+end 
+// Addr[ 22 ]
+initial
+begin
+	Addr[22] = 1'b0;
+end 
+// Addr[ 21 ]
+initial
+begin
+	Addr[21] = 1'b0;
+end 
+// Addr[ 20 ]
+initial
+begin
+	Addr[20] = 1'b0;
+end 
+// Addr[ 19 ]
+initial
+begin
+	Addr[19] = 1'b0;
+end 
+// Addr[ 18 ]
+initial
+begin
+	Addr[18] = 1'b0;
+end 
+// Addr[ 17 ]
+initial
+begin
+	Addr[17] = 1'b0;
+end 
+// Addr[ 16 ]
+initial
+begin
+	Addr[16] = 1'b0;
+end 
+// Addr[ 15 ]
+initial
+begin
+	Addr[15] = 1'b0;
+end 
+// Addr[ 14 ]
+initial
+begin
+	Addr[14] = 1'b0;
+end 
+// Addr[ 13 ]
+initial
+begin
+	Addr[13] = 1'b0;
+end 
+// Addr[ 12 ]
+initial
+begin
+	Addr[12] = 1'b0;
+end 
+// Addr[ 11 ]
+initial
+begin
+	Addr[11] = 1'b0;
+end 
+// Addr[ 10 ]
+initial
+begin
+	Addr[10] = 1'b0;
+end 
+// Addr[ 9 ]
+initial
+begin
+	Addr[9] = 1'b0;
+end 
+// Addr[ 8 ]
+initial
+begin
+	Addr[8] = 1'b0;
+end 
+// Addr[ 7 ]
+initial
+begin
+	Addr[7] = 1'b0;
+end 
+// Addr[ 6 ]
+initial
+begin
+	Addr[6] = 1'b0;
+end 
+// Addr[ 5 ]
+initial
+begin
+	Addr[5] = 1'b0;
+end 
+// Addr[ 4 ]
+initial
+begin
+	Addr[4] = 1'b0;
+end 
+// Addr[ 3 ]
+initial
+begin
+	Addr[3] = 1'b1;
+end 
+// Addr[ 2 ]
+initial
+begin
+	Addr[2] = 1'b0;
+end 
+// Addr[ 1 ]
+initial
+begin
+	Addr[1] = 1'b1;
+end 
+// Addr[ 0 ]
+initial
+begin
+	Addr[0] = 1'b0;
+end 
 
-// AutoClock
+// Clock
 always
 begin
-	AutoClock = 1'b0;
-	AutoClock = #50 1'b1;
-	#50;
-end 
-
-// Button
-initial
-begin
-	Button = 1'b0;
-	Button = #120000 1'b1;
-	Button = #140000 1'b0;
-end 
-// Switches[ 15 ]
-initial
-begin
-	Switches[15] = 1'b0;
-end 
-// Switches[ 14 ]
-initial
-begin
-	Switches[14] = 1'b0;
-end 
-// Switches[ 13 ]
-initial
-begin
-	Switches[13] = 1'b0;
-end 
-// Switches[ 12 ]
-initial
-begin
-	Switches[12] = 1'b0;
-end 
-// Switches[ 11 ]
-initial
-begin
-	Switches[11] = 1'b0;
-end 
-// Switches[ 10 ]
-initial
-begin
-	Switches[10] = 1'b0;
-end 
-// Switches[ 9 ]
-initial
-begin
-	Switches[9] = 1'b0;
-end 
-// Switches[ 8 ]
-initial
-begin
-	Switches[8] = 1'b0;
-end 
-// Switches[ 7 ]
-initial
-begin
-	Switches[7] = 1'b0;
-end 
-// Switches[ 6 ]
-initial
-begin
-	Switches[6] = 1'b0;
-end 
-// Switches[ 5 ]
-initial
-begin
-	Switches[5] = 1'b0;
-end 
-// Switches[ 4 ]
-initial
-begin
-	Switches[4] = 1'b0;
-end 
-// Switches[ 3 ]
-initial
-begin
-	Switches[3] = 1'b0;
-end 
-// Switches[ 2 ]
-initial
-begin
-	Switches[2] = 1'b0;
-end 
-// Switches[ 1 ]
-initial
-begin
-	Switches[1] = 1'b1;
-end 
-// Switches[ 0 ]
-initial
-begin
-	Switches[0] = 1'b0;
-end 
-
-// clk
-always
-begin
-	clk = 1'b0;
-	clk = #50000 1'b1;
+	Clock = 1'b0;
+	Clock = #50000 1'b1;
 	#50000;
+end 
+
+// ClockAuto
+always
+begin
+	ClockAuto = 1'b0;
+	ClockAuto = #1000 1'b1;
+	#1000;
+end 
+// DataIn[ 31 ]
+initial
+begin
+	DataIn[31] = 1'b0;
+end 
+// DataIn[ 30 ]
+initial
+begin
+	DataIn[30] = 1'b0;
+end 
+// DataIn[ 29 ]
+initial
+begin
+	DataIn[29] = 1'b0;
+end 
+// DataIn[ 28 ]
+initial
+begin
+	DataIn[28] = 1'b0;
+end 
+// DataIn[ 27 ]
+initial
+begin
+	DataIn[27] = 1'b0;
+end 
+// DataIn[ 26 ]
+initial
+begin
+	DataIn[26] = 1'b0;
+end 
+// DataIn[ 25 ]
+initial
+begin
+	DataIn[25] = 1'b0;
+end 
+// DataIn[ 24 ]
+initial
+begin
+	DataIn[24] = 1'b0;
+end 
+// DataIn[ 23 ]
+initial
+begin
+	DataIn[23] = 1'b0;
+end 
+// DataIn[ 22 ]
+initial
+begin
+	DataIn[22] = 1'b0;
+end 
+// DataIn[ 21 ]
+initial
+begin
+	DataIn[21] = 1'b0;
+end 
+// DataIn[ 20 ]
+initial
+begin
+	DataIn[20] = 1'b0;
+end 
+// DataIn[ 19 ]
+initial
+begin
+	DataIn[19] = 1'b0;
+end 
+// DataIn[ 18 ]
+initial
+begin
+	DataIn[18] = 1'b0;
+end 
+// DataIn[ 17 ]
+initial
+begin
+	DataIn[17] = 1'b0;
+end 
+// DataIn[ 16 ]
+initial
+begin
+	DataIn[16] = 1'b0;
+end 
+// DataIn[ 15 ]
+initial
+begin
+	DataIn[15] = 1'b0;
+end 
+// DataIn[ 14 ]
+initial
+begin
+	DataIn[14] = 1'b0;
+end 
+// DataIn[ 13 ]
+initial
+begin
+	DataIn[13] = 1'b0;
+end 
+// DataIn[ 12 ]
+initial
+begin
+	DataIn[12] = 1'b0;
+end 
+// DataIn[ 11 ]
+initial
+begin
+	DataIn[11] = 1'b0;
+end 
+// DataIn[ 10 ]
+initial
+begin
+	DataIn[10] = 1'b0;
+end 
+// DataIn[ 9 ]
+initial
+begin
+	DataIn[9] = 1'b0;
+end 
+// DataIn[ 8 ]
+initial
+begin
+	DataIn[8] = 1'b0;
+end 
+// DataIn[ 7 ]
+initial
+begin
+	DataIn[7] = 1'b0;
+end 
+// DataIn[ 6 ]
+initial
+begin
+	DataIn[6] = 1'b0;
+end 
+// DataIn[ 5 ]
+initial
+begin
+	DataIn[5] = 1'b0;
+end 
+// DataIn[ 4 ]
+initial
+begin
+	DataIn[4] = 1'b0;
+end 
+// DataIn[ 3 ]
+initial
+begin
+	DataIn[3] = 1'b0;
+	DataIn[3] = #290000 1'b1;
+end 
+// DataIn[ 2 ]
+initial
+begin
+	DataIn[2] = 1'b1;
+end 
+// DataIn[ 1 ]
+initial
+begin
+	DataIn[1] = 1'b1;
+	DataIn[1] = #290000 1'b0;
+end 
+// DataIn[ 0 ]
+initial
+begin
+	DataIn[0] = 1'b1;
+	DataIn[0] = #290000 1'b0;
+end 
+
+// WriteMem
+initial
+begin
+	WriteMem = 1'b0;
+	WriteMem = #40000 1'b1;
+	WriteMem = #70000 1'b0;
+	WriteMem = #300000 1'b1;
+	WriteMem = #130000 1'b0;
+end 
+
+// useStk
+initial
+begin
+	useStk = 1'b0;
+	useStk = #410000 1'b1;
+	useStk = #130000 1'b0;
 end 
 endmodule
 

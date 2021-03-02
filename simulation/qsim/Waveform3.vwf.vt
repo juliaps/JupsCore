@@ -18,160 +18,420 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/16/2019 17:00:34"
+// Generated on "02/10/2021 23:42:58"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          JupsCore
+// Verilog Test Bench (with test vectors) for design :                          ProgramCounter
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module JupsCore_vlg_vec_tst();
+module ProgramCounter_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg AutoClock;
-reg Button;
-reg [15:0] Switches;
-reg clk;
+reg [31:0] AddressJump;
+reg Clock;
+reg Halt;
+reg branch;
+reg change_pc;
+reg j;
+reg jr;
+reg [31:0] pc_in;
+reg zero;
 // wires                                               
-wire [31:0] Data2;
-wire [6:0] Display1;
-wire [6:0] Display2;
-wire [6:0] Display3;
-wire [6:0] dPC1;
-wire [6:0] dPC2;
-wire [31:0] data1;
-wire [31:0] data3;
-wire [31:0] dataALU;
-wire halt;
-wire [31:0] programCounter;
+wire [31:0] pc_out;
 
 // assign statements (if any)                          
-JupsCore i1 (
+ProgramCounter i1 (
 // port map - connection between master ports and signals/registers   
-	.AutoClock(AutoClock),
-	.Button(Button),
-	.Data2(Data2),
-	.Display1(Display1),
-	.Display2(Display2),
-	.Display3(Display3),
-	.Switches(Switches),
-	.clk(clk),
-	.dPC1(dPC1),
-	.dPC2(dPC2),
-	.data1(data1),
-	.data3(data3),
-	.dataALU(dataALU),
-	.halt(halt),
-	.programCounter(programCounter)
+	.AddressJump(AddressJump),
+	.Clock(Clock),
+	.Halt(Halt),
+	.branch(branch),
+	.change_pc(change_pc),
+	.j(j),
+	.jr(jr),
+	.pc_in(pc_in),
+	.pc_out(pc_out),
+	.zero(zero)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
+// AddressJump[ 31 ]
+initial
+begin
+	AddressJump[31] = 1'b0;
+end 
+// AddressJump[ 30 ]
+initial
+begin
+	AddressJump[30] = 1'b0;
+end 
+// AddressJump[ 29 ]
+initial
+begin
+	AddressJump[29] = 1'b0;
+end 
+// AddressJump[ 28 ]
+initial
+begin
+	AddressJump[28] = 1'b0;
+end 
+// AddressJump[ 27 ]
+initial
+begin
+	AddressJump[27] = 1'b0;
+end 
+// AddressJump[ 26 ]
+initial
+begin
+	AddressJump[26] = 1'b0;
+end 
+// AddressJump[ 25 ]
+initial
+begin
+	AddressJump[25] = 1'b0;
+end 
+// AddressJump[ 24 ]
+initial
+begin
+	AddressJump[24] = 1'b0;
+end 
+// AddressJump[ 23 ]
+initial
+begin
+	AddressJump[23] = 1'b0;
+end 
+// AddressJump[ 22 ]
+initial
+begin
+	AddressJump[22] = 1'b0;
+end 
+// AddressJump[ 21 ]
+initial
+begin
+	AddressJump[21] = 1'b0;
+end 
+// AddressJump[ 20 ]
+initial
+begin
+	AddressJump[20] = 1'b0;
+end 
+// AddressJump[ 19 ]
+initial
+begin
+	AddressJump[19] = 1'b0;
+end 
+// AddressJump[ 18 ]
+initial
+begin
+	AddressJump[18] = 1'b0;
+end 
+// AddressJump[ 17 ]
+initial
+begin
+	AddressJump[17] = 1'b0;
+end 
+// AddressJump[ 16 ]
+initial
+begin
+	AddressJump[16] = 1'b0;
+end 
+// AddressJump[ 15 ]
+initial
+begin
+	AddressJump[15] = 1'b0;
+end 
+// AddressJump[ 14 ]
+initial
+begin
+	AddressJump[14] = 1'b0;
+end 
+// AddressJump[ 13 ]
+initial
+begin
+	AddressJump[13] = 1'b0;
+end 
+// AddressJump[ 12 ]
+initial
+begin
+	AddressJump[12] = 1'b0;
+end 
+// AddressJump[ 11 ]
+initial
+begin
+	AddressJump[11] = 1'b0;
+end 
+// AddressJump[ 10 ]
+initial
+begin
+	AddressJump[10] = 1'b0;
+end 
+// AddressJump[ 9 ]
+initial
+begin
+	AddressJump[9] = 1'b0;
+end 
+// AddressJump[ 8 ]
+initial
+begin
+	AddressJump[8] = 1'b0;
+end 
+// AddressJump[ 7 ]
+initial
+begin
+	AddressJump[7] = 1'b0;
+end 
+// AddressJump[ 6 ]
+initial
+begin
+	AddressJump[6] = 1'b0;
+end 
+// AddressJump[ 5 ]
+initial
+begin
+	AddressJump[5] = 1'b0;
+end 
+// AddressJump[ 4 ]
+initial
+begin
+	AddressJump[4] = 1'b0;
+end 
+// AddressJump[ 3 ]
+initial
+begin
+	AddressJump[3] = 1'b0;
+end 
+// AddressJump[ 2 ]
+initial
+begin
+	AddressJump[2] = 1'b1;
+end 
+// AddressJump[ 1 ]
+initial
+begin
+	AddressJump[1] = 1'b1;
+end 
+// AddressJump[ 0 ]
+initial
+begin
+	AddressJump[0] = 1'b1;
+end 
 
-// AutoClock
+// Clock
 always
 begin
-	AutoClock = 1'b0;
-	AutoClock = #50 1'b1;
-	#50;
-end 
-
-// Button
-initial
-begin
-	Button = 1'b0;
-	Button = #120000 1'b1;
-	Button = #70000 1'b0;
-end 
-// Switches[ 15 ]
-initial
-begin
-	Switches[15] = 1'b0;
-end 
-// Switches[ 14 ]
-initial
-begin
-	Switches[14] = 1'b0;
-end 
-// Switches[ 13 ]
-initial
-begin
-	Switches[13] = 1'b0;
-end 
-// Switches[ 12 ]
-initial
-begin
-	Switches[12] = 1'b0;
-end 
-// Switches[ 11 ]
-initial
-begin
-	Switches[11] = 1'b0;
-end 
-// Switches[ 10 ]
-initial
-begin
-	Switches[10] = 1'b0;
-end 
-// Switches[ 9 ]
-initial
-begin
-	Switches[9] = 1'b0;
-end 
-// Switches[ 8 ]
-initial
-begin
-	Switches[8] = 1'b0;
-end 
-// Switches[ 7 ]
-initial
-begin
-	Switches[7] = 1'b0;
-end 
-// Switches[ 6 ]
-initial
-begin
-	Switches[6] = 1'b0;
-end 
-// Switches[ 5 ]
-initial
-begin
-	Switches[5] = 1'b0;
-end 
-// Switches[ 4 ]
-initial
-begin
-	Switches[4] = 1'b0;
-end 
-// Switches[ 3 ]
-initial
-begin
-	Switches[3] = 1'b0;
-end 
-// Switches[ 2 ]
-initial
-begin
-	Switches[2] = 1'b0;
-end 
-// Switches[ 1 ]
-initial
-begin
-	Switches[1] = 1'b0;
-end 
-// Switches[ 0 ]
-initial
-begin
-	Switches[0] = 1'b0;
-end 
-
-// clk
-always
-begin
-	clk = 1'b0;
-	clk = #50000 1'b1;
+	Clock = 1'b0;
+	Clock = #50000 1'b1;
 	#50000;
+end 
+
+// Halt
+initial
+begin
+	Halt = 1'b0;
+	Halt = #140000 1'b1;
+	Halt = #40000 1'b0;
+end 
+
+// branch
+initial
+begin
+	branch = 1'b0;
+	branch = #430000 1'b1;
+	branch = #50000 1'b0;
+end 
+
+// change_pc
+initial
+begin
+	change_pc = 1'b0;
+	change_pc = #230000 1'b1;
+	change_pc = #60000 1'b0;
+end 
+
+// j
+initial
+begin
+	j = 1'b0;
+end 
+
+// jr
+initial
+begin
+	jr = 1'b0;
+	jr = #730000 1'b1;
+	jr = #40000 1'b0;
+end 
+// pc_in[ 31 ]
+initial
+begin
+	pc_in[31] = 1'b0;
+end 
+// pc_in[ 30 ]
+initial
+begin
+	pc_in[30] = 1'b0;
+end 
+// pc_in[ 29 ]
+initial
+begin
+	pc_in[29] = 1'b0;
+end 
+// pc_in[ 28 ]
+initial
+begin
+	pc_in[28] = 1'b0;
+end 
+// pc_in[ 27 ]
+initial
+begin
+	pc_in[27] = 1'b0;
+end 
+// pc_in[ 26 ]
+initial
+begin
+	pc_in[26] = 1'b0;
+end 
+// pc_in[ 25 ]
+initial
+begin
+	pc_in[25] = 1'b0;
+end 
+// pc_in[ 24 ]
+initial
+begin
+	pc_in[24] = 1'b0;
+end 
+// pc_in[ 23 ]
+initial
+begin
+	pc_in[23] = 1'b0;
+end 
+// pc_in[ 22 ]
+initial
+begin
+	pc_in[22] = 1'b0;
+end 
+// pc_in[ 21 ]
+initial
+begin
+	pc_in[21] = 1'b0;
+end 
+// pc_in[ 20 ]
+initial
+begin
+	pc_in[20] = 1'b0;
+end 
+// pc_in[ 19 ]
+initial
+begin
+	pc_in[19] = 1'b0;
+end 
+// pc_in[ 18 ]
+initial
+begin
+	pc_in[18] = 1'b0;
+end 
+// pc_in[ 17 ]
+initial
+begin
+	pc_in[17] = 1'b0;
+end 
+// pc_in[ 16 ]
+initial
+begin
+	pc_in[16] = 1'b0;
+end 
+// pc_in[ 15 ]
+initial
+begin
+	pc_in[15] = 1'b0;
+end 
+// pc_in[ 14 ]
+initial
+begin
+	pc_in[14] = 1'b0;
+end 
+// pc_in[ 13 ]
+initial
+begin
+	pc_in[13] = 1'b0;
+end 
+// pc_in[ 12 ]
+initial
+begin
+	pc_in[12] = 1'b0;
+end 
+// pc_in[ 11 ]
+initial
+begin
+	pc_in[11] = 1'b0;
+end 
+// pc_in[ 10 ]
+initial
+begin
+	pc_in[10] = 1'b0;
+end 
+// pc_in[ 9 ]
+initial
+begin
+	pc_in[9] = 1'b0;
+end 
+// pc_in[ 8 ]
+initial
+begin
+	pc_in[8] = 1'b0;
+end 
+// pc_in[ 7 ]
+initial
+begin
+	pc_in[7] = 1'b0;
+end 
+// pc_in[ 6 ]
+initial
+begin
+	pc_in[6] = 1'b0;
+end 
+// pc_in[ 5 ]
+initial
+begin
+	pc_in[5] = 1'b0;
+end 
+// pc_in[ 4 ]
+initial
+begin
+	pc_in[4] = 1'b0;
+end 
+// pc_in[ 3 ]
+initial
+begin
+	pc_in[3] = 1'b1;
+end 
+// pc_in[ 2 ]
+initial
+begin
+	pc_in[2] = 1'b0;
+end 
+// pc_in[ 1 ]
+initial
+begin
+	pc_in[1] = 1'b1;
+end 
+// pc_in[ 0 ]
+initial
+begin
+	pc_in[0] = 1'b0;
+end 
+
+// zero
+initial
+begin
+	zero = 1'b0;
+	zero = #430000 1'b1;
+	zero = #80000 1'b0;
 end 
 endmodule
 

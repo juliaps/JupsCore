@@ -1,0 +1,15 @@
+module ProgramCounterControler(pc_cnt, clk, enable_so);
+	input clk;
+	input [31:0] pc_cnt;
+	output reg enable_so;
+	
+	always @ (posedge Clock) begin
+		if(pc_cnt == 20) begin
+			enable_so <= 1'b1;
+		end
+		else begin
+			enable_so <= 1'b0;
+		end
+	end
+	
+endmodule 

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for JupsCore
-Tue Dec 17 19:58:18 2019
+Sun Feb 21 17:13:05 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,9 +36,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Dec 17 19:58:18 2019 ;
+; EDA Netlist Writer Status ; Successful - Sun Feb 21 17:13:05 2021 ;
 ; Revision Name             ; JupsCore                              ;
-; Top-level Entity Name     ; JupsCore                              ;
+; Top-level Entity Name     ; RandomAccessMemory                    ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -65,13 +65,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-------------------------------------------------------------+
-; Simulation Generated Files                                  ;
-+-------------------------------------------------------------+
-; Generated Files                                             ;
-+-------------------------------------------------------------+
-; /home/julia/Downloads/JupsCore/simulation/qsim//JupsCore.vo ;
-+-------------------------------------------------------------+
++--------------------------------------------------------------+
+; Simulation Generated Files                                   ;
++--------------------------------------------------------------+
+; Generated Files                                              ;
++--------------------------------------------------------------+
+; /home/julia/Documents/Jups-Core/simulation/qsim//JupsCore.vo ;
++--------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -93,14 +93,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Dec 17 19:58:17 2019
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/julia/Downloads/JupsCore/simulation/qsim/ JupsCore -c JupsCore
+    Info: Processing started: Sun Feb 21 17:13:05 2021
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/julia/Documents/Jups-Core/simulation/qsim/ JupsCore -c JupsCore
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file JupsCore.vo in folder "/home/julia/Downloads/JupsCore/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file JupsCore.vo in folder "/home/julia/Documents/Jups-Core/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1058 megabytes
-    Info: Processing ended: Tue Dec 17 19:58:18 2019
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 1046 megabytes
+    Info: Processing ended: Sun Feb 21 17:13:05 2021
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

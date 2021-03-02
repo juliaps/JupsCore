@@ -18,160 +18,524 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/16/2019 17:11:51"
+// Generated on "02/19/2021 00:28:48"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          JupsCore
+// Verilog Test Bench (with test vectors) for design :                          RegisterBank
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module JupsCore_vlg_vec_tst();
+module RegisterBank_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg AutoClock;
-reg Button;
-reg [15:0] Switches;
-reg clk;
+reg [4:0] Addr1;
+reg [4:0] Addr2;
+reg [4:0] Addr3;
+reg [4:0] AddrWrite;
+reg Clock;
+reg [31:0] DataIn;
+reg [31:0] ProgramCounter;
+reg Write;
+reg jal;
+reg select_proc_reg_read;
+reg select_proc_reg_write;
 // wires                                               
+wire [31:0] Data1;
 wire [31:0] Data2;
-wire [6:0] Display1;
-wire [6:0] Display2;
-wire [6:0] Display3;
-wire [6:0] dPC1;
-wire [6:0] dPC2;
-wire [31:0] data1;
-wire [31:0] data3;
-wire [31:0] dataALU;
-wire halt;
-wire [31:0] programCounter;
+wire [31:0] Data3;
 
 // assign statements (if any)                          
-JupsCore i1 (
+RegisterBank i1 (
 // port map - connection between master ports and signals/registers   
-	.AutoClock(AutoClock),
-	.Button(Button),
+	.Addr1(Addr1),
+	.Addr2(Addr2),
+	.Addr3(Addr3),
+	.AddrWrite(AddrWrite),
+	.Clock(Clock),
+	.Data1(Data1),
 	.Data2(Data2),
-	.Display1(Display1),
-	.Display2(Display2),
-	.Display3(Display3),
-	.Switches(Switches),
-	.clk(clk),
-	.dPC1(dPC1),
-	.dPC2(dPC2),
-	.data1(data1),
-	.data3(data3),
-	.dataALU(dataALU),
-	.halt(halt),
-	.programCounter(programCounter)
+	.Data3(Data3),
+	.DataIn(DataIn),
+	.ProgramCounter(ProgramCounter),
+	.Write(Write),
+	.jal(jal),
+	.select_proc_reg_read(select_proc_reg_read),
+	.select_proc_reg_write(select_proc_reg_write)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
+// Addr1[ 4 ]
+initial
+begin
+	Addr1[4] = 1'b0;
+end 
+// Addr1[ 3 ]
+initial
+begin
+	Addr1[3] = 1'b0;
+end 
+// Addr1[ 2 ]
+initial
+begin
+	Addr1[2] = 1'b0;
+end 
+// Addr1[ 1 ]
+initial
+begin
+	Addr1[1] = 1'b0;
+end 
+// Addr1[ 0 ]
+initial
+begin
+	Addr1[0] = 1'b1;
+end 
+// Addr2[ 4 ]
+initial
+begin
+	Addr2[4] = 1'b0;
+end 
+// Addr2[ 3 ]
+initial
+begin
+	Addr2[3] = 1'b0;
+end 
+// Addr2[ 2 ]
+initial
+begin
+	Addr2[2] = 1'b0;
+end 
+// Addr2[ 1 ]
+initial
+begin
+	Addr2[1] = 1'b1;
+end 
+// Addr2[ 0 ]
+initial
+begin
+	Addr2[0] = 1'b0;
+end 
+// Addr3[ 4 ]
+initial
+begin
+	Addr3[4] = 1'b1;
+end 
+// Addr3[ 3 ]
+initial
+begin
+	Addr3[3] = 1'b1;
+end 
+// Addr3[ 2 ]
+initial
+begin
+	Addr3[2] = 1'b1;
+end 
+// Addr3[ 1 ]
+initial
+begin
+	Addr3[1] = 1'b1;
+end 
+// Addr3[ 0 ]
+initial
+begin
+	Addr3[0] = 1'b0;
+end 
+// AddrWrite[ 4 ]
+initial
+begin
+	AddrWrite[4] = 1'b0;
+end 
+// AddrWrite[ 3 ]
+initial
+begin
+	AddrWrite[3] = 1'b0;
+end 
+// AddrWrite[ 2 ]
+initial
+begin
+	AddrWrite[2] = 1'b0;
+end 
+// AddrWrite[ 1 ]
+initial
+begin
+	AddrWrite[1] = 1'b0;
+end 
+// AddrWrite[ 0 ]
+initial
+begin
+	AddrWrite[0] = 1'b1;
+end 
 
-// AutoClock
+// Clock
 always
 begin
-	AutoClock = 1'b0;
-	AutoClock = #50 1'b1;
-	#50;
-end 
-
-// Button
-initial
-begin
-	Button = 1'b0;
-	Button = #130000 1'b1;
-	Button = #120000 1'b0;
-end 
-// Switches[ 15 ]
-initial
-begin
-	Switches[15] = 1'b0;
-end 
-// Switches[ 14 ]
-initial
-begin
-	Switches[14] = 1'b0;
-end 
-// Switches[ 13 ]
-initial
-begin
-	Switches[13] = 1'b0;
-end 
-// Switches[ 12 ]
-initial
-begin
-	Switches[12] = 1'b0;
-end 
-// Switches[ 11 ]
-initial
-begin
-	Switches[11] = 1'b0;
-end 
-// Switches[ 10 ]
-initial
-begin
-	Switches[10] = 1'b0;
-end 
-// Switches[ 9 ]
-initial
-begin
-	Switches[9] = 1'b0;
-end 
-// Switches[ 8 ]
-initial
-begin
-	Switches[8] = 1'b0;
-end 
-// Switches[ 7 ]
-initial
-begin
-	Switches[7] = 1'b0;
-end 
-// Switches[ 6 ]
-initial
-begin
-	Switches[6] = 1'b0;
-end 
-// Switches[ 5 ]
-initial
-begin
-	Switches[5] = 1'b0;
-end 
-// Switches[ 4 ]
-initial
-begin
-	Switches[4] = 1'b0;
-end 
-// Switches[ 3 ]
-initial
-begin
-	Switches[3] = 1'b0;
-end 
-// Switches[ 2 ]
-initial
-begin
-	Switches[2] = 1'b0;
-end 
-// Switches[ 1 ]
-initial
-begin
-	Switches[1] = 1'b1;
-end 
-// Switches[ 0 ]
-initial
-begin
-	Switches[0] = 1'b0;
-end 
-
-// clk
-always
-begin
-	clk = 1'b0;
-	clk = #50000 1'b1;
+	Clock = 1'b0;
+	Clock = #50000 1'b1;
 	#50000;
+end 
+// DataIn[ 31 ]
+initial
+begin
+	DataIn[31] = 1'b0;
+end 
+// DataIn[ 30 ]
+initial
+begin
+	DataIn[30] = 1'b0;
+end 
+// DataIn[ 29 ]
+initial
+begin
+	DataIn[29] = 1'b0;
+end 
+// DataIn[ 28 ]
+initial
+begin
+	DataIn[28] = 1'b0;
+end 
+// DataIn[ 27 ]
+initial
+begin
+	DataIn[27] = 1'b0;
+end 
+// DataIn[ 26 ]
+initial
+begin
+	DataIn[26] = 1'b0;
+end 
+// DataIn[ 25 ]
+initial
+begin
+	DataIn[25] = 1'b0;
+end 
+// DataIn[ 24 ]
+initial
+begin
+	DataIn[24] = 1'b0;
+end 
+// DataIn[ 23 ]
+initial
+begin
+	DataIn[23] = 1'b0;
+end 
+// DataIn[ 22 ]
+initial
+begin
+	DataIn[22] = 1'b0;
+end 
+// DataIn[ 21 ]
+initial
+begin
+	DataIn[21] = 1'b0;
+end 
+// DataIn[ 20 ]
+initial
+begin
+	DataIn[20] = 1'b0;
+end 
+// DataIn[ 19 ]
+initial
+begin
+	DataIn[19] = 1'b0;
+end 
+// DataIn[ 18 ]
+initial
+begin
+	DataIn[18] = 1'b0;
+end 
+// DataIn[ 17 ]
+initial
+begin
+	DataIn[17] = 1'b0;
+end 
+// DataIn[ 16 ]
+initial
+begin
+	DataIn[16] = 1'b0;
+end 
+// DataIn[ 15 ]
+initial
+begin
+	DataIn[15] = 1'b0;
+end 
+// DataIn[ 14 ]
+initial
+begin
+	DataIn[14] = 1'b0;
+end 
+// DataIn[ 13 ]
+initial
+begin
+	DataIn[13] = 1'b0;
+end 
+// DataIn[ 12 ]
+initial
+begin
+	DataIn[12] = 1'b0;
+end 
+// DataIn[ 11 ]
+initial
+begin
+	DataIn[11] = 1'b0;
+end 
+// DataIn[ 10 ]
+initial
+begin
+	DataIn[10] = 1'b0;
+end 
+// DataIn[ 9 ]
+initial
+begin
+	DataIn[9] = 1'b0;
+end 
+// DataIn[ 8 ]
+initial
+begin
+	DataIn[8] = 1'b0;
+end 
+// DataIn[ 7 ]
+initial
+begin
+	DataIn[7] = 1'b0;
+end 
+// DataIn[ 6 ]
+initial
+begin
+	DataIn[6] = 1'b0;
+end 
+// DataIn[ 5 ]
+initial
+begin
+	DataIn[5] = 1'b0;
+end 
+// DataIn[ 4 ]
+initial
+begin
+	DataIn[4] = 1'b0;
+end 
+// DataIn[ 3 ]
+initial
+begin
+	DataIn[3] = 1'b0;
+	DataIn[3] = #330000 1'b1;
+end 
+// DataIn[ 2 ]
+initial
+begin
+	DataIn[2] = 1'b1;
+	DataIn[2] = #330000 1'b0;
+end 
+// DataIn[ 1 ]
+initial
+begin
+	DataIn[1] = 1'b1;
+end 
+// DataIn[ 0 ]
+initial
+begin
+	DataIn[0] = 1'b1;
+	DataIn[0] = #330000 1'b0;
+end 
+// ProgramCounter[ 31 ]
+initial
+begin
+	ProgramCounter[31] = 1'b0;
+end 
+// ProgramCounter[ 30 ]
+initial
+begin
+	ProgramCounter[30] = 1'b0;
+end 
+// ProgramCounter[ 29 ]
+initial
+begin
+	ProgramCounter[29] = 1'b0;
+end 
+// ProgramCounter[ 28 ]
+initial
+begin
+	ProgramCounter[28] = 1'b0;
+end 
+// ProgramCounter[ 27 ]
+initial
+begin
+	ProgramCounter[27] = 1'b0;
+end 
+// ProgramCounter[ 26 ]
+initial
+begin
+	ProgramCounter[26] = 1'b0;
+end 
+// ProgramCounter[ 25 ]
+initial
+begin
+	ProgramCounter[25] = 1'b0;
+end 
+// ProgramCounter[ 24 ]
+initial
+begin
+	ProgramCounter[24] = 1'b0;
+end 
+// ProgramCounter[ 23 ]
+initial
+begin
+	ProgramCounter[23] = 1'b0;
+end 
+// ProgramCounter[ 22 ]
+initial
+begin
+	ProgramCounter[22] = 1'b0;
+end 
+// ProgramCounter[ 21 ]
+initial
+begin
+	ProgramCounter[21] = 1'b0;
+end 
+// ProgramCounter[ 20 ]
+initial
+begin
+	ProgramCounter[20] = 1'b0;
+end 
+// ProgramCounter[ 19 ]
+initial
+begin
+	ProgramCounter[19] = 1'b0;
+end 
+// ProgramCounter[ 18 ]
+initial
+begin
+	ProgramCounter[18] = 1'b0;
+end 
+// ProgramCounter[ 17 ]
+initial
+begin
+	ProgramCounter[17] = 1'b0;
+end 
+// ProgramCounter[ 16 ]
+initial
+begin
+	ProgramCounter[16] = 1'b0;
+end 
+// ProgramCounter[ 15 ]
+initial
+begin
+	ProgramCounter[15] = 1'b0;
+end 
+// ProgramCounter[ 14 ]
+initial
+begin
+	ProgramCounter[14] = 1'b0;
+end 
+// ProgramCounter[ 13 ]
+initial
+begin
+	ProgramCounter[13] = 1'b0;
+end 
+// ProgramCounter[ 12 ]
+initial
+begin
+	ProgramCounter[12] = 1'b0;
+end 
+// ProgramCounter[ 11 ]
+initial
+begin
+	ProgramCounter[11] = 1'b0;
+end 
+// ProgramCounter[ 10 ]
+initial
+begin
+	ProgramCounter[10] = 1'b0;
+end 
+// ProgramCounter[ 9 ]
+initial
+begin
+	ProgramCounter[9] = 1'b0;
+end 
+// ProgramCounter[ 8 ]
+initial
+begin
+	ProgramCounter[8] = 1'b0;
+end 
+// ProgramCounter[ 7 ]
+initial
+begin
+	ProgramCounter[7] = 1'b0;
+end 
+// ProgramCounter[ 6 ]
+initial
+begin
+	ProgramCounter[6] = 1'b0;
+end 
+// ProgramCounter[ 5 ]
+initial
+begin
+	ProgramCounter[5] = 1'b0;
+end 
+// ProgramCounter[ 4 ]
+initial
+begin
+	ProgramCounter[4] = 1'b0;
+end 
+// ProgramCounter[ 3 ]
+initial
+begin
+	ProgramCounter[3] = 1'b1;
+	ProgramCounter[3] = #340000 1'b0;
+end 
+// ProgramCounter[ 2 ]
+initial
+begin
+	ProgramCounter[2] = 1'b0;
+	ProgramCounter[2] = #340000 1'b1;
+end 
+// ProgramCounter[ 1 ]
+initial
+begin
+	ProgramCounter[1] = 1'b0;
+end 
+// ProgramCounter[ 0 ]
+initial
+begin
+	ProgramCounter[0] = 1'b0;
+	ProgramCounter[0] = #340000 1'b1;
+end 
+
+// Write
+initial
+begin
+	Write = 1'b1;
+	Write = #130000 1'b0;
+	Write = #100000 1'b1;
+	Write = #310000 1'b0;
+	Write = #100000 1'b1;
+end 
+
+// jal
+initial
+begin
+	jal = 1'b0;
+	jal = #140000 1'b1;
+	jal = #70000 1'b0;
+	jal = #330000 1'b1;
+	jal = #80000 1'b0;
+end 
+
+// select_proc_reg_read
+initial
+begin
+	select_proc_reg_read = 1'b0;
+	select_proc_reg_read = #380000 1'b1;
+	select_proc_reg_read = #400000 1'b0;
+end 
+
+// select_proc_reg_write
+initial
+begin
+	select_proc_reg_write = 1'b0;
+	select_proc_reg_write = #380000 1'b1;
+	select_proc_reg_write = #400000 1'b0;
 end 
 endmodule
 

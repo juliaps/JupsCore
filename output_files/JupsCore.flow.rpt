@@ -1,5 +1,5 @@
 Flow report for JupsCore
-Sat Jun  6 09:24:20 2020
+Sun Feb 28 17:52:38 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Jun  6 09:23:38 2020       ;
+; Flow Status                        ; Successful - Sun Feb 28 17:52:08 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; JupsCore                                    ;
 ; Top-level Entity Name              ; JupsCore                                    ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 6,590 / 114,480 ( 6 % )                     ;
-;     Total combinational functions  ; 5,650 / 114,480 ( 5 % )                     ;
-;     Dedicated logic registers      ; 2,151 / 114,480 ( 2 % )                     ;
-; Total registers                    ; 2151                                        ;
+; Total logic elements               ; 3,597 / 114,480 ( 3 % )                     ;
+;     Total combinational functions  ; 3,114 / 114,480 ( 3 % )                     ;
+;     Dedicated logic registers      ; 1,123 / 114,480 ( < 1 % )                   ;
+; Total registers                    ; 1123                                        ;
 ; Total pins                         ; 60 / 529 ( 11 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 19,200 / 3,981,312 ( < 1 % )                ;
+; Total memory bits                  ; 12,800 / 3,981,312 ( < 1 % )                ;
 ; Embedded Multiplier 9-bit elements ; 6 / 532 ( 1 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2020 09:01:33 ;
+; Start date & time ; 02/28/2021 17:49:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; JupsCore            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 163164136597410.159144489330058        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 163164136597410.161454534608174        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -90,11 +90,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:48     ; 1.0                     ; 1015 MB             ; 00:01:09                           ;
-; Fitter                    ; 00:21:06     ; 1.0                     ; 1586 MB             ; 00:21:46                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 835 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:41     ; 1.7                     ; 1159 MB             ; 00:00:41                           ;
-; Total                     ; 00:22:39     ; --                      ; --                  ; 00:23:40                           ;
+; Analysis & Synthesis      ; 00:00:33     ; 1.0                     ; 982 MB              ; 00:00:52                           ;
+; Fitter                    ; 00:02:20     ; 1.0                     ; 1516 MB             ; 00:02:41                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 826 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:28     ; 1.8                     ; 1047 MB             ; 00:00:29                           ;
+; Total                     ; 00:03:25     ; --                      ; --                  ; 00:04:06                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -103,10 +103,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+----------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +---------------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis      ; julia-dell       ; Ubuntu 16.04.6 ; 16         ; x86_64         ;
-; Fitter                    ; julia-dell       ; Ubuntu 16.04.6 ; 16         ; x86_64         ;
-; Assembler                 ; julia-dell       ; Ubuntu 16.04.6 ; 16         ; x86_64         ;
-; TimeQuest Timing Analyzer ; julia-dell       ; Ubuntu 16.04.6 ; 16         ; x86_64         ;
+; Analysis & Synthesis      ; julia-dell       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
+; Fitter                    ; julia-dell       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
+; Assembler                 ; julia-dell       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
+; TimeQuest Timing Analyzer ; julia-dell       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
 +---------------------------+------------------+----------------+------------+----------------+
 
 
