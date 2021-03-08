@@ -269,7 +269,6 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform39.vwf
 set_global_assignment -name VERILOG_FILE Mux_32.v
 set_global_assignment -name VERILOG_FILE Mux_5.v
 set_global_assignment -name VERILOG_FILE Mux_16.v
-set_global_assignment -name VERILOG_FILE Mux_PC.v
 set_location_assignment PIN_AD17 -to dPC3[6]
 set_location_assignment PIN_AE17 -to dPC3[5]
 set_location_assignment PIN_AG17 -to dPC3[4]

@@ -124,7 +124,7 @@ module ControlUnit (Button, curr_exec_process, curr_select_proc_reg_write, curr_
 				WriteMem = 1'b0;
 				useStk = 1'b0;
 				alu_code = 5'b00010;
-				type_r = 1'b0;
+				type_r = 1'b1; // mudei pra pegar a ultima posicao
 				branch = 1'b0;
 				exec_process = curr_exec_process;
 				select_proc_reg_write = curr_select_proc_reg_write ;
@@ -591,7 +591,7 @@ module ControlUnit (Button, curr_exec_process, curr_select_proc_reg_write, curr_
 				alu_code = 5'b11111;
 				type_r = 1'b0;
 				branch = 1'b0;
-				exec_process = curr_exec_process;
+				exec_process = 1'b0;
 				select_proc_reg_write = curr_select_proc_reg_write;
 				select_proc_reg_read = 1'b0;
 				change_pc = 1'b0;
@@ -612,7 +612,7 @@ module ControlUnit (Button, curr_exec_process, curr_select_proc_reg_write, curr_
 				alu_code = 5'b11111;
 				type_r = 1'b0;
 				branch = 1'b0;
-				exec_process = 1'b1;
+				exec_process = 1'b0;
 				select_proc_reg_write = 1'b0;
 				select_proc_reg_read = curr_select_proc_reg_read;
 				change_pc = 1'b0;

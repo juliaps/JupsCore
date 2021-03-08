@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/16/2019 17:34:49"
+// Generated on "03/03/2021 22:53:58"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          JupsCore
 // 
@@ -32,38 +32,26 @@ module JupsCore_vlg_vec_tst();
 reg AutoClock;
 reg Button;
 reg [15:0] Switches;
-reg clk;
 // wires                                               
-wire [31:0] Data2;
 wire [6:0] Display1;
 wire [6:0] Display2;
 wire [6:0] Display3;
 wire [6:0] dPC1;
 wire [6:0] dPC2;
-wire [31:0] data1;
-wire [31:0] data3;
-wire [31:0] dataALU;
-wire halt;
-wire [31:0] programCounter;
+wire [6:0] dPC3;
 
 // assign statements (if any)                          
 JupsCore i1 (
 // port map - connection between master ports and signals/registers   
 	.AutoClock(AutoClock),
 	.Button(Button),
-	.Data2(Data2),
 	.Display1(Display1),
 	.Display2(Display2),
 	.Display3(Display3),
 	.Switches(Switches),
-	.clk(clk),
 	.dPC1(dPC1),
 	.dPC2(dPC2),
-	.data1(data1),
-	.data3(data3),
-	.dataALU(dataALU),
-	.halt(halt),
-	.programCounter(programCounter)
+	.dPC3(dPC3)
 );
 initial 
 begin 
@@ -74,16 +62,14 @@ end
 always
 begin
 	AutoClock = 1'b0;
-	AutoClock = #50 1'b1;
-	#50;
+	AutoClock = #5 1'b1;
+	#5;
 end 
 
 // Button
 initial
 begin
 	Button = 1'b0;
-	Button = #120000 1'b1;
-	Button = #140000 1'b0;
 end 
 // Switches[ 15 ]
 initial
@@ -158,20 +144,12 @@ end
 // Switches[ 1 ]
 initial
 begin
-	Switches[1] = 1'b1;
+	Switches[1] = 1'b0;
 end 
 // Switches[ 0 ]
 initial
 begin
 	Switches[0] = 1'b0;
-end 
-
-// clk
-always
-begin
-	clk = 1'b0;
-	clk = #50000 1'b1;
-	#50000;
 end 
 endmodule
 

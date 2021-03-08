@@ -9,7 +9,7 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 	wire halt, enableSO;
 	wire  bounceButton, buttonHalt, resetButton;
 	wire alu, branch, change_pc, im, in, j, jal, jr, write, writemem, usestk, type_r, zero, end_proc, exec_process, select_proc_reg_read, select_proc_reg_write , curr_exec_process, curr_select_proc_reg_write, curr_select_proc_reg_read ;
-	wire [31:0] addrJump, Instruction, pc_in;
+	wire [31:0] addrJump, Instruction;
 	wire [15:0] binaryData;
 	wire [31:0] datain, dataMem, imediate, data2;
 	wire [4:0] aluCode , AddrWrite, pc_cnt;
@@ -32,13 +32,6 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 							  .mux_output(addrJump)
 	);
 	
-	Mux_PC MuxPC( 		 .input_1(data1),
-							 .input_2(data2),
-							 .set(change_pc),
-							 .flag(exec_process),
-							 .mux_output(pc_in)
-	);
-	
 	ProgramCounter pc( .Clock(clk),
 							 .j(j),
 							 .jr(jr),
@@ -46,7 +39,7 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 							 .branch(branch),
 							 .change_pc(change_pc),
 							 .AddressJump(addrJump),
-							 .pc_in(pc_in),
+							 .pc_in(data1),
 							 .Halt(halt),
 							 .exec_proc(exec_process),
 							 .pc_out(programCounter),

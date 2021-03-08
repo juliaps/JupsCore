@@ -14,19 +14,19 @@ module ProgramCounter(Clock, j , jr, zero , branch, change_pc, AddressJump, pc_i
 	always @ (posedge Clock) begin
 		if (zero && branch) begin
 			PC <= AddressJump;
-			if(!exec_proc) begin
+			if(exec_proc) begin
 				pc_counter <= pc_counter + 1'b1;
 			end
 		end
 		else if (j) begin
 			PC <= AddressJump;
-			if(!exec_proc) begin
+			if(exec_proc) begin
 				pc_counter <= pc_counter + 1'b1;
 			end
 		end
 		else if (jr) begin
 			PC <= AddressJump;
-			if(!exec_proc) begin
+			if(exec_proc) begin
 				pc_counter <= pc_counter + 1'b1;
 			end
 		end
@@ -36,7 +36,7 @@ module ProgramCounter(Clock, j , jr, zero , branch, change_pc, AddressJump, pc_i
 		end
 		else if (!Halt) begin
 			PC <= PC +1'b1;
-			if(!exec_proc) begin
+			if(exec_proc) begin
 				pc_counter <= pc_counter + 1'b1;
 			end
 		end

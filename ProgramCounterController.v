@@ -9,10 +9,9 @@ module ProgramCounterController(end_proc, pc_counter, pc_curr, enable_so , pc_ne
 	input [31:0] pc_curr;
 	output reg enable_so;
 	output wire [31:0] pc_new;
-	//wire [31:0] pc_so;
 	
-	always @ (*) begin
-		if(pc_counter == 20) begin
+	always @ (pc_counter or end_proc) begin
+		if(pc_counter == 10) begin
 			enable_so <= 1'b1;
 		end
 		else if(end_proc) begin
@@ -23,7 +22,6 @@ module ProgramCounterController(end_proc, pc_counter, pc_curr, enable_so , pc_ne
 		end
 	end
 	
-	//assign pc_so = 32'b00000000000000000000000000000011 ;
-	assign pc_new = (enable_so) ? 32'b00000000000000000000000000000011  : pc_curr;
+	assign pc_new = (enable_so) ? 32'b00000000000000000000000000010001 : pc_curr;
 	
 endmodule 

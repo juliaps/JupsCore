@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Feb 28 17:49:39 2021
+Analysis & Synthesis Status : Successful - Mon Mar  8 01:44:56 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : JupsCore
 Top-level Entity Name : JupsCore
 Family : Cyclone IV E
-Total logic elements : 4,076
-    Total combinational functions : 3,114
-    Dedicated logic registers : 1,123
-Total registers : 1123
+Total logic elements : 7,050
+    Total combinational functions : 5,128
+    Dedicated logic registers : 2,154
+Total registers : 2154
 Total pins : 60
 Total virtual pins : 0
-Total memory bits : 12,800
+Total memory bits : 8,192
 Embedded Multiplier 9-bit elements : 6
 Total PLLs : 0
