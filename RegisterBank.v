@@ -23,11 +23,11 @@ module RegisterBank(Clock, jal, Write, Addr1, Addr2, Addr3, AddrWrite, ProgramCo
 		end
 		
 		if (change_so) begin
-			regs[26] <= ProgramCounter;
+			regs[26 + (32 * select_proc_reg_write)] <= ProgramCounter;
 		end
 		
 		if(end_proc) begin
-			regs[25] <= end_proc;
+			regs[25 + (32 * select_proc_reg_write)] <= end_proc;
 		end
 		
 		if (Write) begin

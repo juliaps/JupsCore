@@ -8,11 +8,11 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 	wire clk;
 	wire halt, enableSO;
 	wire  bounceButton, buttonHalt, resetButton;
-	wire alu, branch, change_pc, im, in, j, jal, jr, write, writemem, usestk, type_r, zero, end_proc, exec_process, select_proc_reg_read, select_proc_reg_write , curr_exec_process, curr_select_proc_reg_write, curr_select_proc_reg_read ;
+	wire alu, branch, change_pc, im, in, j, jal, jr, write, writemem, usestk, type_r, zero, end_proc, exec_process, select_proc_reg_read, select_proc_reg_write , curr_exec_process, curr_select_proc_reg_write, curr_select_proc_reg_read , zera_pc_cnt;
 	wire [31:0] addrJump, Instruction;
 	wire [15:0] binaryData;
 	wire [31:0] datain, dataMem, imediate, data2;
-	wire [4:0] aluCode , AddrWrite, pc_cnt;
+	wire [4:0] aluCode , AddrWrite, pc_cnt, new_pc_counter;
 	
 	
 
@@ -38,8 +38,10 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 							 .zero(zero),
 							 .branch(branch),
 							 .change_pc(change_pc),
+							 .zera_pc_cnt(zera_pc_cnt),
 							 .AddressJump(addrJump),
 							 .pc_in(data1),
+							 .pc_curr(NewProgramCounter),
 							 .Halt(halt),
 							 .exec_proc(exec_process),
 							 .pc_out(programCounter),
@@ -50,7 +52,7 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 											.pc_counter(pc_cnt),
 											.pc_curr(programCounter),
 											.enable_so(enableSO), 
-											.pc_new(NewProgramCounter) 
+											.pc_new(NewProgramCounter)
 	);
 	
 	InstructionMemory istM( .AutoClock(AutoClock),
@@ -91,7 +93,8 @@ module JupsCore(AutoClock, Button, Switches, Display1, Display2, Display3, dPC1,
 									  .exec_process(exec_process),
 									  .select_proc_reg_read(select_proc_reg_read),
 									  .select_proc_reg_write(select_proc_reg_write),
-									  .end_proc(end_proc)
+									  .end_proc(end_proc),
+									  .zera_pc_cnt(zera_pc_cnt)
 	);
 	
 	RandomAccessMemory RAM( .DataIn(data2),
